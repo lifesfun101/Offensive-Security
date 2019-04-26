@@ -1,6 +1,6 @@
 # Offensive Security
 
-This repository is dedicated to offensive security. I only started my journey in that path about 2 months ago. 
+This repository is dedicated to offensive security. I only started my journey in that path about 4 to 5 months ago. 
 I don't claim to know anything, better yet consider I know nothing about it. Throughout this repository I will be sharing things I found useful myself. These "things" will include: 
 * variety of tools 
 * variety of tactics 
