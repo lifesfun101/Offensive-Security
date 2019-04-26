@@ -1,4 +1,4 @@
-#Offenseve Security
+# Offensive Security
 
 This reposistory is dedicated to offensive security. I only started my journey in that path about 2 months ago. 
 I don't claim to know anything, better yet I know nothing about it. Throughout this repository I will be sharing things I found useful myself. These "things" will include: 
