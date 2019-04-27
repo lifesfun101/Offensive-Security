@@ -31,5 +31,7 @@ The book takes you through penetration process step by step: information gatheri
 * By Peter Kim
 
 Ironically with the name, it was the second book that I've read. Also a really good, informative book. However, I would say this book is not as beginner friendly as the one above.
+
 I would grade this book as begginer to light intermediate. The lab setup instructions in it are not as detailed and beginner friendly as in Georgia's book. However, the book is newer and the techniques that are discussed in the book are newer as well. There are also many more intriquete techniques than there were in the first book. For example, the book covers a good chunk of powershell related material, which is not mentioned in the first book at all.
+
 Although most of the tools mentioned in the setup part already come pre-installed in modern Kali, author does go over on how to install a lot of extra interesting tools that might not have been available preset at the time and a lot of scripts that one might have to search for otherwise manually.
