@@ -36,4 +36,4 @@ I would grade this book as begginer to light intermediate. The lab setup instruc
 
 Although most of the tools mentioned in the setup part already come pre-installed in modern Kali, author does go over on how to install a lot of extra interesting tools that might not have been available preset at the time and a lot of scripts that one might have to search for otherwise manually.
 
-Overall, in my opinion this is a very good second book to expand/build upon your offesive arsenal gained in the first book.
+Overall, in my opinion this is a very good second book to expand/build upon your offensive arsenal gained in the first book.
