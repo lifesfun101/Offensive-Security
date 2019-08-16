@@ -36,6 +36,8 @@ Cybrary: Web Application Penetration Testing - https://www.cybrary.it/course/web
           * Introductory course to web application vulnerabilities such as SQL Injections, Cross Site Scripts and 
             Local File Inclusion/Remote File Inclusion. It also goes over Report Creation.
 
+After going through the resources above one should have a basic understanding of penetration testing , some tools and techniques (at least I did).
+
 #### Websites Providing Hands On Experience:
 
 Over the Wire War Games: Presents you with various CTF like challenges in Linux environment - https://overthewire.org/wargames/
@@ -45,6 +47,18 @@ Hack this Site: Free website with various pentesting challenges - https://www.ha
 Hack the Box: Pentesting/CTF Labs - https://www.hackthebox.eu/
 
 Vulnhub: Provides OSCP like virtual machines for download and practice - https://www.vulnhub.com/
+      * Some of the boxes I've done: 
+        * [Kioptrix 1](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/)
+        * [Kioptrix 1.1](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/)
+        * [Kiotprix 1.2](https://www.vulnhub.com/entry/kioptrix-level-12-3,24/)
+        * [Kioptrix 1.3](https://www.vulnhub.com/entry/kioptrix-level-13-4,25/)
+        * [Kioptrix 2014](https://www.vulnhub.com/entry/kioptrix-2014-5,62/)
+        * [Stapler](https://www.vulnhub.com/entry/stapler-1,150/)
+                                   
 
-OWASP Vulnerable Web Applications: Numerous links vulnerabale web application to practice on both online and offline: https://www.owasp.org/index.php/OWASP_Vulnerable_Web_Applications_Directory_Project
+OWASP Vulnerable Web Applications: Numerous links vulnerabale web application to practice on both online and offline: [OWASP Vulnerable App](https://www.owasp.org/index.php/OWASP_Vulnerable_Web_Applications_Directory_Project)
+      * Some of my favorites for Web App Pentesting: Security Shepherd, Damn Vulerable Web Application
+ 
+ 
+ 
 
