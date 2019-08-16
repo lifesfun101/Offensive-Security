@@ -1,7 +1,15 @@
-# Offensive Security
+# #pwd: 
+#/lifesfun101/Offensive_Security
 
-This repository is dedicated to offensive security. I only started my journey in that path about 4 to 5 months ago. 
-I don't claim to know anything, better yet consider I know nothing about it. Throughout this repository I will be sharing things I found useful myself. These "things" will include: 
+# #whoami
+
+I'm a young information security professional who enjoys tough problems to solve and new challenges to take on. I have graduated from  college with Information Security Degree and have always been fascinated with this area of Information Technology. In the past I have been on the defensive side of security, working in a Security Operations Center as a Security Analyst.
+
+The only certificate I have so far is CISSP (Associate) and currently I am working on obtaining my OSCP. I enjoy a good challenging box from hackthebox and from vulnhub. I follow many security pages on reddit and attend local security meetups.
+
+# #man
+This repository is dedicated to offensive security. I started my journey on that path in February, 2019. 
+I don't claim to know anything, better yet consider I know nothing about it. Throughout this repository I will be sharing things I found useful myself. These "things" will include:
 * variety of tools 
 * variety of tactics 
 * variety scripts possibly wrote 
@@ -11,4 +19,4 @@ I don't claim to know anything, better yet consider I know nothing about it. Thr
 
 I might eventually post a walkthrough to a few boxes I break, be in hackthebox or vulnhub.
 
-I really hope my contributions on this page, will help others along the way and save them quite some time as well
+I really hope my contributions on this page will help others along the way and save them quite some time as well
