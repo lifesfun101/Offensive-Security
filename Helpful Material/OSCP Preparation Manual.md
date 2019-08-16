@@ -38,7 +38,7 @@ Cybrary: Web Application Penetration Testing - https://www.cybrary.it/course/web
 
 After going through the resources above one should have a basic understanding of penetration testing , some tools and techniques (at least I did).
 
-#### Websites Providing Hands On Experience:
+# Websites Providing Hands On Experience:
 
 Over the Wire War Games: Presents you with various CTF like challenges in Linux environment - https://overthewire.org/wargames/
 
