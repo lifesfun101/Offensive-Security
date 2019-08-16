@@ -48,7 +48,7 @@ Hack the Box: Pentesting/CTF Labs - https://www.hackthebox.eu/
 
 Vulnhub: Provides OSCP like virtual machines for download and practice - https://www.vulnhub.com/
 
-      * Some of the boxes I've done: 
+        Some of the boxes I've done: 
       
         [Kioptrix 1](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/)
         
