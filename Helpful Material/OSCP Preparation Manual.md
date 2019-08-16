@@ -18,6 +18,7 @@ A collection of *nix Sysadmin Test Questions and Answers - https://github.com/tr
 #### Familiarity with Bash scripting along with basic Perl or Python is considered a plus:
 
 Bash - https://www.codecademy.com/learn/learn-the-command-line
+
 Python - https://www.codecademy.com/learn/learn-python
 
 #### Basic Penetration Testing Learning Resources:
@@ -34,3 +35,16 @@ Cybrary: Advanced Penetration Testing - https://www.cybrary.it/course/advanced-p
 Cybrary: Web Application Penetration Testing - https://www.cybrary.it/course/web-application-pen-testing/
           * Introductory course to web application vulnerabilities such as SQL Injections, Cross Site Scripts and 
             Local File Inclusion/Remote File Inclusion. It also goes over Report Creation.
+
+#### Websites Providing Hands On Experience:
+
+Over the Wire War Games: Presents you with various CTF like challenges in Linux environment - https://overthewire.org/wargames/
+
+Hack this Site: Free website with various pentesting challenges - https://www.hackthissite.org/
+
+Hack the Box: Pentesting/CTF Labs - https://www.hackthebox.eu/
+
+Vulnhub: Provides OSCP like virtual machines for download and practice - https://www.vulnhub.com/
+
+OWASP Vulnerable Web Applications: Numerous links vulnerabale web application to practice on both online and offline: https://www.owasp.org/index.php/OWASP_Vulnerable_Web_Applications_Directory_Project
+
