@@ -47,6 +47,7 @@ Hack this Site: Free website with various pentesting challenges - https://www.ha
 Hack the Box: Pentesting/CTF Labs - https://www.hackthebox.eu/
 
 Vulnhub: Provides OSCP like virtual machines for download and practice - https://www.vulnhub.com/
+
       * Some of the boxes I've done: 
       
         * [Kioptrix 1](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/)
@@ -60,6 +61,12 @@ Vulnhub: Provides OSCP like virtual machines for download and practice - https:/
         * [Kioptrix 2014](https://www.vulnhub.com/entry/kioptrix-2014-5,62/)
         
         * [Stapler](https://www.vulnhub.com/entry/stapler-1,150/)
+        
+        * [Tr0ll 1](https://www.vulnhub.com/entry/tr0ll-1,100/)
+        
+        * [Tr0ll 2](https://www.vulnhub.com/entry/tr0ll-2,107/)
+        
+        * [SickOS 1.1](https://www.vulnhub.com/entry/sickos-11,132/)
                                    
 
 OWASP Vulnerable Web Applications: Numerous links vulnerabale web application to practice on both online and offline: [OWASP Vulnerable App](https://www.owasp.org/index.php/OWASP_Vulnerable_Web_Applications_Directory_Project)
