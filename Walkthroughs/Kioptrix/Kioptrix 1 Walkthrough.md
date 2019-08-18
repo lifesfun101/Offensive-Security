@@ -35,6 +35,8 @@
 Discovering the vulnerable system with arp-scan -l:
 
 
+![arp-scan](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/arp_scan.png)
+
 ### nmap
 
 All ports nmap scan:
