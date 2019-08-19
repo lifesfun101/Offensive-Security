@@ -50,7 +50,7 @@ Vulnhub: Provides OSCP like virtual machines for download and practice - https:/
 
    Some of the boxes I've done: 
       
-   *   *[Kioptrix 1](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/)
+   *   *[Kioptrix 1](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/)    --- walkthorugh can be found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix/Kioptrix%201%20Walkthrough.md)
         
    *   *[Kioptrix 1.1](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/)
        
