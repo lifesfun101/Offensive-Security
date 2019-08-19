@@ -69,24 +69,28 @@ Browser enumeration of port 80:
 ![browser_port_80](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix/browser80.png)
 
 Nikto enumeration of port 443 fails due incompatible SSL protocols, however the information we got from scanning port 80 seems to present the SSL vulnerabilities.
+
 ![nikto_port_443](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/nikto443.png)
 
 On most occasions this problem can be fixed by editing openssl.cnf file located at /etc/ssl/openssl.cnf in Kali Linux, however it did not work this time.
 
 The usual work around is to downgrade MinProtocol parameter to TLSv1.0 and to comment out CipherString parameter as per screenshot below:
+
 ![open_ssl](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/openssl.png)
 
 Gobuster enumeration of port 443:
+
 ![gobuster_port_443](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/gobuster443.png)
 
 \*Note: -k flag is used to skip SSL certificate verification for HTTPS(port 443)
 
 Browser enumeration of port 443:
+
 ![browser_port_443](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/browser443.png)
 
 The website seems to be the exact replica of what we found on port 80.
 
-## Threat Modeling &amp; Vulnerability Identification
+## Vulnerability Identification
 
 A specific line that catches attention in Nikto scan is:
 ![nikto_mod_ssl](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/nikto_mod_ssl.png)
@@ -112,6 +116,7 @@ Cp is the copy command, followed by the path to the exploit, and the dot tells c
 
 Now it&#39;s time to compile and run the exploit.
 
+![gcc_764](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/gcc764.png)
 
 As can be seen from the output there was a lot of errors compiling the exploit, which ultimately resulted in failure.
 
@@ -123,6 +128,7 @@ The mistake that has been made is the assumption that the exploit will work out 
 
 Reviewing the exploit:
 
+![review_exploit](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/review_exploit.png)
 
 Right at the top there&#39;s a helpful note from exploit-db which gives us a link to a page that tells us how to update the exploit:
 
@@ -134,28 +140,35 @@ Let&#39;s follow the guide. (If nano is used as an editor alt+shift+3 will show 
 
 First, new headers have to be added:
 
+![headers](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/headers.png)
 
 Following the URL has to be updated:
 
+![url](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/url.png)
 
 Next const need to be added to unsigned char \*p, \*end declaration of variables:
 
+![const](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/const%20variable.png)
 
 After doing so, save the exploit and exit to compile.
 
+![lcrypto](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/gcc764_lcrypto.png)
 
 Tada, there are no errors. The exploit was successfully compiled.
 
 Checking the exploit requirements.
 
+![requirements](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/exploit_requirements.png)
 
-As can be see from the image about, the output provides us with Usage example and Offset&#39;s for numerous operating systems.
+As can be see from the image above, the output provides us with Usage example and Offset&#39;s for numerous operating systems.
 
 Nmap output provided the operating system information and apache version:
 
+![os_apache](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/os_apache_version.png)
 
-The list can be analyzed manually or to make it easier grep can be used to find out which is the suitable option:
+The list can be analyzed manually, though to make it easier grep can be used to find out which is the suitable option:
 
+![options](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/suitable_options.png)
 
 The exploit&#39;s output gets piped to grep, which looks for instance of Red Hat operating system. The output then gets piped to another grep which looks for apache version that was discovered.
 
@@ -167,29 +180,35 @@ This leaves 2 options, and now there is enough information to run the exploit.
 
 Since the exploit uses SSL it needs to be launched against port 443.
 
+![exploit](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/exploit.png)
 
 The low privilege shell has now been obtained.
 
 ### Privilege Escalation Enumeration
 
-Now it&#39;s time for some basic enumeration in order to find out privilege escalation vector.
+Now it&#39;s time for some basic enumeration in order to find out privilege escalation vector, starting with Operating System and Kernel information:
 
+![uname](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/uname_release.png)
 
 As can be seen from above, this is Red Hat Linux 7.2 (which has been already discovered) and kernel version 2.4.7.
 
 ifconfig command did not work, meaning other commands (and exploits) might not work too due to the default path not being set. This can be fixed by exporting the PATH variable, as shown below.
 
+![path](https://github.com/lifesfun101/Offensive-Security/find/master)
 
 Continue enumerating the system further.
 
 Cat /etc/passwd | grep bash will provide a list of users present on the system.
 
+![passwd](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/passwd.png)
 
 find / -perm -u=s -type f 2\&gt;/dev/null will profile all files with SUID privileges:
 
+![suid](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/suid.png)
 
 By typing gcc, a compiler installation can be confirmed:
 
+![gcc](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/gcc.png)
 
 After doing quick enumeration the results can be looked over to find an exploit vector.
 
@@ -199,14 +218,17 @@ The first vector is kernel.
 
 Again, searchsploit can be used to find an appropriate kernel exploit:
 
+![kernel](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/searchsploit_kernel.png)
 
 Due to victim&#39;s system having a compiler, the exploit can be transferred to the attacker&#39;s webserver, downloaded to the victim&#39;s system and compiled on the system as show below.
 
 On Kali the file is copied to the web server directory (do not forget to start the webserver with service apache2 start):
 
+![apache](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/searchsploit3.png)
 
 On the victim&#39;s system a world writeable folder should be found and switched into (most of the times /tmp or /dev/shm folders do the job). After that wget command is used to download the exploit from the attacker&#39;s machine and gcc command is used to compile the exploit.
 
+![root](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/root.png)
 
 Tada, root has been obtained.
 
