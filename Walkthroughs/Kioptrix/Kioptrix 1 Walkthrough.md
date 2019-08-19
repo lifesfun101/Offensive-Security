@@ -40,13 +40,12 @@ Discovering the vulnerable system with arp-scan -l:
 ### nmap
 
 All ports nmap scan:
-
+![nmap-allports](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/nmap_all_ports.png)
 
 \*Note: Nmap -p- flag scans all TCP ports from 1 to 65535.
 
 Nmap version and default script scan:
-
-
+![nmap_sv_sc_scan](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/nmap_sv_sc.png)
 \*Note:
 
 -p specifies the ports to scan
@@ -58,53 +57,54 @@ Nmap version and default script scan:
 ### Web Ports Enumeration
 
 Nikto enumeration of port 80:
-
-
+![nikto_port_80](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/nikto_80.png)
 \*Note: Nikto scans a web application for vulnerabilities.
 
 Gobuster enumeration of port 80:
-
+![gobuster_port_80](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/gobuster80.png)
 
 \*Note: Gobuster discovers hidden web directories. -u flag is used to specify the url and -w flag is used to specify the wordlist to be used.
 
 Browser enumeration of port 80:
-
+![browser_port_80](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix/browser80.png)
 
 Nikto enumeration of port 443 fails due incompatible SSL protocols, however the information we got from scanning port 80 seems to present the SSL vulnerabilities.
-
+![nikto_port_443](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/nikto443.png)
 
 On most occasions this problem can be fixed by editing openssl.cnf file located at /etc/ssl/openssl.cnf in Kali Linux, however it did not work this time.
 
 The usual work around is to downgrade MinProtocol parameter to TLSv1.0 and to comment out CipherString parameter as per screenshot below:
-
+![open_ssl](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/openssl.png)
 
 Gobuster enumeration of port 443:
-
+![gobuster_port_443](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/gobuster443.png)
 
 \*Note: -k flag is used to skip SSL certificate verification for HTTPS(port 443)
 
 Browser enumeration of port 443:
-
+![browser_port_443](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/browser443.png)
 
 The website seems to be the exact replica of what we found on port 80.
 
 ## Threat Modeling &amp; Vulnerability Identification
 
 A specific line that catches attention in Nikto scan is:
-
+![nikto_mod_ssl](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/nikto_mod_ssl.png)
 
 ### Searchsploit
 
 Searchsploit tool can be used to search for vulnerability presented by Nikto in exploit-db database:
 
+![searchsploit_mod_ssl](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/searchsploit_mod_ssl.png)
 
 2 exploits were discovered, version 1 and version 2. Assuming that version 2 is newer, that&#39;s the exploit that will be used.
 
 To get full path and URL references for the specific exploit -p \&lt;exploit id\&gt; flag can be used with searchsploit:
-
+![searchsploit_764](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/searchsploit764.png)
 
 -p flag also copies the exploit&#39;s path to clipboard, which makes it easier to copy and paste it when copying the file to the folder one is working in.
 
+![copy](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/cp764.png)
 
 Cp is the copy command, followed by the path to the exploit, and the dot tells cp to copy the file to the current directory.
 
