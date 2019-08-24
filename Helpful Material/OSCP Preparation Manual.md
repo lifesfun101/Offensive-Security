@@ -60,7 +60,7 @@ Vulnhub: Provides OSCP like virtual machines for download and practice - https:/
         
    *   *[Kioptrix 2014](https://www.vulnhub.com/entry/kioptrix-2014-5,62/)
         
-   *   *[Stapler](https://www.vulnhub.com/entry/stapler-1,150/)  --- wwalkthrough can be found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Stapler_Walkthrough.md)
+   *   *[Stapler](https://www.vulnhub.com/entry/stapler-1,150/)  --- walkthrough can be found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Stapler_Walkthrough.md)
         
    *   *[Tr0ll 1](https://www.vulnhub.com/entry/tr0ll-1,100/)
         
