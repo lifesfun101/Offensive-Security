@@ -24,7 +24,7 @@
 
 ## Arp-scan
 
-Arp-scan -l:
+Discovering the vulnerable system with arp-scan -l:
 
 ![arp_scan)](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/Lin%20Enum.png?raw=true)
 
@@ -38,15 +38,23 @@ Nmap -sV -sC -A:
 
 ![nmap_sv_sc](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/nmap_sv_sc1.png)
 
+-p specifies the ports to scan
+
+-sV flag attempts to determine service and version information for given ports
+
+-sC flag utilizes a default set of nmap scripts
+
 ## nikto
 
-Nikto 80:
+Nikto enumeration of port 80:
 
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/nikto_80.png)
 
-Nikto 12380:
+Nikto enumeration of port 12380:
 
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/nikto_12380.png)
+
+*Note: Nikto scans a web application for vulnerabilities.
 
 ## FTP
 
@@ -55,15 +63,18 @@ ftp enumeration:
 
 ## SMB
 
-SMB enumeration:
+SMB enumeration with smbclient:
 
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/smb_L.png)
+
+*Note: -L option lists SMB shares
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/smb_kathy.png)
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/smb_tmp.png)
 
 ## 666
 
-Port 666 Enumeration:
+Port 666 Enumeration with netcat (nc):
 
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/port_666.png)
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/port_666_zip.png)
@@ -73,7 +84,7 @@ Port 666 Enumeration:
 
 As a &quot;red.initech&quot; entry has been added to /etc/hosts on the kali machine.
 
-Port 12380 enumeration:
+Port 12380 enumeration with browser:
 
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/browser_12380.png)
 
@@ -92,6 +103,8 @@ Wp-scan is ran to find low hanging fruit, however it does not find anything inte
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/wpscan1.png)
 -------------------------------------------------Snippet---------------------------------------------------
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/wordpress2.png)
+
+*Note: -e vt,vp options check for vulnerable themes and vulnerable plugins
 
 Manual enumeration of WordPress plugins and themes, presents an interesting plugin called Advanced Video Embed – Embed Videos or Playlists:
 
