@@ -41,9 +41,11 @@ Nmap -sV -sC -A:
 ## nikto
 
 Nikto 80:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/nikto_80.png)
 
 Nikto 12380:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/nikto_12380.png)
 
 ## FTP
@@ -54,6 +56,7 @@ ftp enumeration:
 ## SMB
 
 SMB enumeration:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/smb_L.png)
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/smb_kathy.png)
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/smb_tmp.png)
@@ -61,6 +64,7 @@ SMB enumeration:
 ## 666
 
 Port 666 Enumeration:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/port_666.png)
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/port_666_zip.png)
 
@@ -78,9 +82,11 @@ Robots.txt content:
 ## WordPress
 
 /blogblog/ directory presents us with WordPress style website:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/wordpress.png)
 
 Wp-scan is ran to find low hanging fruit, however it does not find anything interesting:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/wpscan1.png)
 -------------------------------------------------Snippet---------------------------------------------------
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/wordpress2.png)
@@ -92,39 +98,48 @@ Manual enumeration of WordPress plugins and themes, presents an interesting plug
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/wordpress_plugins4.png)
 
 As per readme.txt, the plugin&#39;s version is 1.0.
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/wordpress_advanced_video.png)
 
 ## Searchsploit
 
 Search exploit-db for suitable exploit
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/searchsploit_advanced.png)
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/searchsploit_advanced_p.png)
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/advanced_cp.png)
 
 Reviewing the exploit and subbing the URL parameter, the default settings is to download wp-config.php:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/advanced_modify_url.png)
 
 ## Exploitation
 
 As the exploit is ran, errors regarding SSL appear.
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/advanced_exploit.png)
 
 
 To work around the error, quick google search suggests importing SSL library and editing SSL context as shown below:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/advanced_exploit_error_fix.png)
 
 After running the exploit again, change the file to /etc/passwd and run it again:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/advanced_modify_url.png)
 
 When visiting the blog once more, notice that new entries were created (the exploit does not mention that or how it obtains the file):
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/jpeg_blog_entries.png)
 
 
 These .jpeg files can be found in the wp-content upload folder (as can be seen per the multiple images being uploaded it took a little bit to figure out that this how the exploit worked):
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/wp_uploads.png)
 
 
 They can be then manually saved (Oh no he didn&#39;t just use GUI to download files):
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/wp_uploads_save.png)
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/wp_uploads_save2.png)
 
