@@ -149,22 +149,27 @@ They can be then manually saved (Oh no he didn&#39;t just use GUI to download fi
 
 
 Change the file extensions to text:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/file%20extensions.png)
 
 
 File.txt is wp-config.php:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/wp-config.png)
 
 
 File2.txt is /etc/passwd:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/etc_passwd.png)
 
 
 Clean up /etc/passwd (removing false and nologin):
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/etc_passwd_clean.png)
 
 
 Create user list:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/userlist.png)
 
 ##Hydra
@@ -175,10 +180,12 @@ Use hydra to bruteforce SSH:
 
 
 Password obtained from WordPress:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/hydra_wordpress.png)
 
 
 Logging in in with Zoe&#39;s credentials:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/zoe_ssh.png)
 
 
@@ -187,10 +194,12 @@ Logging in in with Zoe&#39;s credentials:
 ### Enumerating (Manual way):
 
 Determining users with administrative privileges:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/admin_priv_user.png)
 
 
 Determining readable files in home directory:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/readalbe_home1.png)
 
 ---------------------------Snippet--------------------------
@@ -199,9 +208,11 @@ Determining readable files in home directory:
 
 
 Enumerating JKanode&#39;s bash\_history file:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/jkanode_bash_history.png)
 
 Alternatively:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/jkanode_bash_history2.png)
 
 
