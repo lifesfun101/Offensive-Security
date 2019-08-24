@@ -212,9 +212,11 @@ LinEnum.sh, scripted by rebootuser, can be used to automate enumeration process.
 Although automated scripts might seem as an easier way, sometimes one can get lost in abundance of information it provides. Personally, enumerating manually have helped me just as many times as automatic scripts. Automatic scripts are more for the low hanging fruit in my opinion.
 
 First the script has to be downloaded to the victim machine.
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/Lin%20Enum.png)
 
 Once downloading and running it:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/Lin%20Enum2.png)
 
 -------------------------------------------------------------Snippet-----------------------------------------------------------
@@ -234,5 +236,6 @@ Logging into Peter&#39;s account and changing root&#39;s password:
 
 
 Flag file:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/flag.png)
 
