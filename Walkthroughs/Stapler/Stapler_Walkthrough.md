@@ -74,9 +74,11 @@ Port 666 Enumeration:
 As a &quot;red.initech&quot; entry has been added to /etc/hosts on the kali machine.
 
 Port 12380 enumeration:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/browser_12380.png)
 
 Robots.txt content:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/browser_12380_robots.png)
 
 ## WordPress
@@ -92,6 +94,7 @@ Wp-scan is ran to find low hanging fruit, however it does not find anything inte
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/wordpress2.png)
 
 Manual enumeration of WordPress plugins and themes, presents an interesting plugin called Advanced Video Embed – Embed Videos or Playlists:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/wordpress_plugins.png)
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/wordpress_plugins2.png)
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/wordpress_plugins3.png)
@@ -103,7 +106,7 @@ As per readme.txt, the plugin&#39;s version is 1.0.
 
 ## Searchsploit
 
-Search exploit-db for suitable exploit
+Searching exploit-db for suitable exploit
 
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/searchsploit_advanced.png)
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/searchsploit_advanced_p.png)
@@ -189,7 +192,9 @@ Determining users with administrative privileges:
 
 Determining readable files in home directory:
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/readalbe_home1.png)
+
 ---------------------------Snippet--------------------------
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/readalbe_home2.png)
 
 
@@ -211,15 +216,20 @@ First the script has to be downloaded to the victim machine.
 
 Once downloading and running it:
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/Lin%20Enum2.png)
+
 -------------------------------------------------------------Snippet-----------------------------------------------------------
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/Lin%20Enum3.png)
+
 -------------------------------------------------------------Snippet-----------------------------------------------------------
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/Lin%20Enum4.png)
 
 
 As per script&#39;s result it can be seen that &quot;peter&quot; is an admin user and that the possible password is JZQuyIN5.
 
 Logging into Peter&#39;s account and changing root&#39;s password:
+
 ![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Images/peter.png)
 
 
