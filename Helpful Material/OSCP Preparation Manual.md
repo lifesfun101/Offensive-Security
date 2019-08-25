@@ -67,6 +67,8 @@ Vulnhub: Provides OSCP like virtual machines for download and practice - https:/
    *   *[Tr0ll 2](https://www.vulnhub.com/entry/tr0ll-2,107/)
         
    *   *[SickOS 1.1](https://www.vulnhub.com/entry/sickos-11,132/)
+   
+   *   *[symfonos: 2](https://www.vulnhub.com/entry/symfonos-2,331/)   --- walkthrough can ber found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Symfonos:%202/Symfonos:%202%20Walkthrough.md)
                                    
 
 OWASP Vulnerable Web Applications: Numerous links vulnerabale web application to practice on both online and offline: [OWASP Vulnerable App](https://www.owasp.org/index.php/OWASP_Vulnerable_Web_Applications_Directory_Project)
