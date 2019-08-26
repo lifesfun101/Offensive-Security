@@ -194,7 +194,7 @@ As can be seen from above, this is Red Hat Linux 7.2 (which has been already dis
 
 ifconfig command did not work, meaning other commands (and exploits) might not work too due to the default path not being set. This can be fixed by exporting the PATH variable, as shown below.
 
-![path](https://github.com/lifesfun101/Offensive-Security/find/master)
+![path](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix/path.png)
 
 Continue enumerating the system further.
 
