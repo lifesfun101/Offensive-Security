@@ -1,4 +1,4 @@
-# **Vulnerable System** : 192.168.20.141 (Stapler)
+# **Vulnerable System** : Stapler
 
 **Operating System** : Ubuntu 16.04
 
