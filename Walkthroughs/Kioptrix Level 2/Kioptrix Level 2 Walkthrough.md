@@ -58,7 +58,7 @@
 
     * Discovered Command Execution Vulnerability (browser)
 
-    * Low Privilege Shell Gained
+    * Low Privilege Shell Gained (netcat)
 
     * Privilege Escalation Enumeration (uname, cat /etc/\*-release)
 
