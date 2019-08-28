@@ -9,14 +9,13 @@ So far I have 2 certificates under my belt which are OSCP and CISSP (Associate).
 
 # #man
 This repository is dedicated to offensive security. I started my journey on that path in February, 2019. 
-I don't claim to know anything, better yet consider I know nothing about it. Throughout this repository I will be sharing things I found useful myself. These "things" will include:
+I don't claim to be an expert in this field. I'm just an enthusiast who would like to help others on the same journey. Throughout this repository I will be sharing things I found useful myself. These "things" will include:
 * variety of tools 
 * variety of tactics 
 * variety scripts I wrote
 * variety of scripts someone else wrote and I found useful (with appropriate creditation) 
-* links to other pages that i stumbled upon in my journey and found helpful 
+* [walkthrough](https://github.com/lifesfun101/Offensive-Security/tree/master/Walkthroughs) tutorials to vulnerable systems from Vulnhub and HackTheBox
+* links to other pages that I stumbled upon in my journey and found helpful 
 * etc. 
-
-I might eventually post a walkthrough to a few boxes I break, be it hackthebox or vulnhub.
 
 I really hope my contributions on this page will help others along the way and save them quite some time as well
