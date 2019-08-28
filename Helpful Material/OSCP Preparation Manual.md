@@ -3,6 +3,7 @@
 All the course prerequisites can easily be found on offensive-security's webpage.
 
 A lot of these prerequisites can be learned or reviewed on cybrary.com or codeacademy.com
+  
   *Cybrary has a lot of free courses, Codeacademy has some free courses but mostly subscription based.
 
 #### A solid understanding of TCP/IP:
