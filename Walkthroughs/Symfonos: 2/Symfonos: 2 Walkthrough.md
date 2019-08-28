@@ -4,7 +4,9 @@
 
 **Kernel** : 4.9.0
 
-----------------1st low privilege------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+
+1st low privilege
 
 **Vulnerability Exploited** : Poorly configured SMB shares/weak password
 
@@ -14,7 +16,9 @@
 
 **Severity** : **Medium**
 
-----------------2nd low privilege------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+
+2nd low privilege
 
 **Vulnerability Exploited** : LibreNMS addhost Command Injection
 
@@ -28,6 +32,8 @@
 
 **Severity** : **Medium**
 
+----------------------------------------------------------------------------------------------------------------------------------------
+
 **Privilege Escalation Vulnerability** : SQL database running with administrative privileges and is accessible to non privileged user.
 
 **Privilege Escalation Vulnerability Explained:** Due to SQL running as root, a low privileged user was able to connect to MYSQL database and escape into root interface.
@@ -35,6 +41,25 @@
 **Vulnerability fix** : Make a separate user for MySQL with as least privileges as needed.
 
 **Severity** : **High**
+
+## Methodology
+
+    * Port Scanning (nmap)
+    * Web Port Enumeration (nikto, gobuster, firefox)
+    * SMB Enumeration (smbclient)
+    * File enumeration (cat)
+    * FTP Enumeration (ftp)
+    * FTP Password Bruteforce (hydra)
+    * Obtained Low Privilege Shell for User aeolus (ssh)
+    * Privilege Escalation Enumeration (uname, cat /etc/*-release, ss -ant)
+    * Setup SSH Local Port Forwarding (ssh)
+    * Setup Firefox Proxy (firefox)
+    * Discovered Appropriate Exploit: LibreNMS - Command Execution (searchsploit/exploit-db)
+    * Setup Proxy Connection for msfconsole (proxychains & ssh)
+    * Updated Metasploit with a New Exploit.
+    * Ran the Exploit and Gained Low Privilege Shell for User cronus
+    * Privilege Escalation Enumeration (sudo -l)
+    * Privilege Escalation (MySQL ran with Administrative Privileges)
 
 ## Nmap
 
