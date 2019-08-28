@@ -10,7 +10,7 @@
 
 **Proof of Concept Code** : [https://www.exploit-db.com/exploits/764](https://www.exploit-db.com/exploits/764)
 
-**Vulnerability Explained** :  A buffer over flow vulnerability exists in mod\_ssl versions before 2.8.7. When mod\_ssl attempts to cache a session that is too large the excessive code spills into the memory allowing a shell payload to be executed. The obtained shell will have privileges of the web user (apache), however this can allow for further exploitation.
+**Vulnerability Explained** :  A buffer overflow vulnerability exists in mod\_ssl versions before 2.8.7. When mod\_ssl attempts to cache a session that is too large the excessive code spills into the memory allowing a shell payload to be executed. The obtained shell will have privileges of the web user (apache), however this can allow for further exploitation.
 
 **Vulnerability fix** : Update mod\_ssl to version 2.8.7 or above. Implement patch management program.
 
@@ -27,6 +27,20 @@
 **Vulnerability fix** : Update the kernel to the newest version possible. Implement patch management program.
 
 **Severity** : **High**
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+## Methodology
+
+    * Host Discovery (arpscan)
+    * Port Scanning (nmap)
+    * Web Port Enumeration (nikto, gobuster)
+    * Discovered Apache mod\_ssl Vulnerability (nikto)
+    * Discovered Appropriate Exploit and Fixed the Exploit (searchsploit/exploit-db)
+    * Low Privilige Shell Gained
+    * Privilege Escalation Enumeration (uname, cat /etc/*-release)
+    * Discovered Appropriate Exploit - &#39;ptrace/kmod&#39; Local Privilege Escalation (searchsploit/exploit-db)
+    * Compiled the Exploit and Gained Administrative Privileges
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -156,7 +170,7 @@ After doing so, save the exploit and exit to compile.
 
 ![lcrypto](https://github.com/lifesfun101/Offensive-Security/raw/master/Walkthroughs/Kioptrix/gcc764_lcrypto.png)
 
-Tada, there are no errors. The exploit was successfully compiled.
+There are no errors anymore. The exploit was successfully compiled.
 
 Checking the exploit requirements.
 
