@@ -14,6 +14,9 @@
 
 **Severity** : **Medium**
 
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
 **Privilege Escalation Vulnerability** : Administrative user&#39;s password is stored
 
 **Privilege Escalation Vulnerability Explained:** Administrative user&#39;s password was found in a .bash\_history file of a low privilege user that could be read by anyone on the system.
@@ -21,6 +24,27 @@
 **Vulnerability fix** : Implement strong permissions on user owned private files (such as chmod 400). Users should not share passwords with each other.
 
 **Severity** : **High**
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+## Methodology
+
+    * Host Discovery (arpscan)
+    * Port Scanning (nmap)
+    * Web Port Enumeration - port 80, 12380 (nikto, gobuster, browser)
+    * FTP Enumeration (ftp)
+    * SMB Enumeration (smbclient)
+    * Port 666 Enumeration (netcat)
+    * WordPress Enumeration (wpscan, browser)
+    * Discovered Appropriate Exploit (searchsploit/exploit-db)
+    * Fixing Errors (Google, nano)
+    * Enumerated Obtained Files (cat)
+    * Bruteforced SSH password (hydra)
+    * Low Privilige Shell Gained (ssh)
+    * Privilege Escalation Enumeration (.bash_history)
+    * Gained Administrative Privileges (plaintext password)
+
+----------------------------------------------------------------------------------------------------------------------------------------
 
 ## Arp-scan
 
