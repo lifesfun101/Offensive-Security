@@ -59,7 +59,7 @@ Vulnhub: Provides OSCP like virtual machines for download and practice - https:/
       
    *   *[Kioptrix 1](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/)    --- walkthrough can be found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix/Kioptrix%201%20Walkthrough.md)
         
-   *   *[Kioptrix 1.1](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/)
+   *   *[Kioptrix 1.1](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/) --- walkthrough can be found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%202/Kioptrix%20Level%202%20Walkthrough.md)
        
    *   *[Kiotprix 1.2](https://www.vulnhub.com/entry/kioptrix-level-12-3,24/)
         
