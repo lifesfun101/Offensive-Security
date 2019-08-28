@@ -16,6 +16,6 @@ I don't claim to be an expert in this field. I'm just an enthusiast who would li
 * variety of scripts someone else wrote and I found useful (with appropriate creditation) 
 * [walkthrough](https://github.com/lifesfun101/Offensive-Security/tree/master/Walkthroughs) tutorials to vulnerable systems from Vulnhub and HackTheBox
 * links to other pages that I stumbled upon in my journey and found helpful 
-* etc. 
+* and other [helpful material](https://github.com/lifesfun101/Offensive-Security/tree/master/Helpful%20Material)
 
 I really hope my contributions on this page will help others along the way and save them quite some time as well
