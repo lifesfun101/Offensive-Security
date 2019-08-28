@@ -39,7 +39,7 @@
     * Discovered Appropriate Exploit and Fixed the Exploit (searchsploit/exploit-db)
     * Low Privilige Shell Gained
     * Privilege Escalation Enumeration (uname, cat /etc/*-release)
-    * Discovered Appropriate Exploit - &#39;ptrace/kmod&#39; Local Privilege Escalation (searchsploit/exploit-db)
+    * Discovered Appropriate Exploit - 'ptrace/kmod' Local Privilege Escalation (searchsploit/exploit-db)
     * Compiled the Exploit and Gained Administrative Privileges
 
 ----------------------------------------------------------------------------------------------------------------------------------------
