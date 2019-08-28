@@ -18,4 +18,6 @@ I don't claim to be an expert in this field. I'm just an enthusiast who would li
 * links to other pages that I stumbled upon in my journey and found helpful 
 * and other [helpful material](https://github.com/lifesfun101/Offensive-Security/tree/master/Helpful%20Material)
 
+Currently I am working on [OSCP Preparation Manual](https://github.com/lifesfun101/Offensive-Security/blob/master/Helpful%20Material/OSCP%20Preparation%20Manual.md)
+
 I really hope my contributions on this page will help others along the way and save them quite some time as well
