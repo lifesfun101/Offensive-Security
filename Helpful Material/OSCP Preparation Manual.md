@@ -7,9 +7,9 @@ A lot of these prerequisites can be learned or reviewed on cybrary.com or codeac
   *Cybrary has a lot of free courses, Codeacademy has some free courses but mostly subscription based.
 
 #### A solid understanding of TCP/IP:
-What is TCP/IP - https://www.youtube.com/watch?v=PpsEaqJV_A0
+What is TCP/IP - [youtube presentation](https://www.youtube.com/watch?v=PpsEaqJV_A0)
 
-TCP/IP and Subnet Masking - https://www.youtube.com/watch?v=EkNq4TrHP_U
+TCP/IP and Subnet Masking - [youtube presentation](https://www.youtube.com/watch?v=EkNq4TrHP_U)
 
 #### Networking: 
 
