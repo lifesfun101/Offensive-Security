@@ -35,8 +35,9 @@ Cybrary: Penetration Testing and Ethical Hacking - https://www.cybrary.it/course
 
 Cybrary: Advanced Penetration Testing - https://www.cybrary.it/course/advanced-penetration-testing/
           
-          * I discovered this course much later than reading the book mentioned above. The course basically follows the exercises in the
-            book and is narrated by the book's author, Georgia Weidman. It's always nice to have 2 ways of learning.
+          * I discovered this course much later than reading the book mentioned above. 
+            The course basically follows the exercises in the Penetration Testing book 
+            and is narrated by the book's author, Georgia Weidman. It's always nice to have 2 ways of learning.
 
 Cybrary: Web Application Penetration Testing - https://www.cybrary.it/course/web-application-pen-testing/
           
