@@ -74,11 +74,11 @@ Currently scanning: Finished! \| Screen View: Unique Hosts
 
 3 Captured ARP Req/Rep packets, from 3 hosts. Total size: 180
 
-\____________________________________________________________________________\_
+_____________________________________________________________________________
 
 IP At MAC Address Count Len MAC Vendor / Hostname
 
-\-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 192.168.211.1 00:50:56:c0:00:01 1 60 VMware, Inc.
 
@@ -90,7 +90,8 @@ IP At MAC Address Count Len MAC Vendor / Hostname
 
 Nmap all ports scan:
 
-root\@kali:\~\# nmap -p- 192.168.211.129
+```bash
+root@kali:~# nmap -p- 192.168.211.129
 
 Starting Nmap 7.80 ( https://nmap.org ) at 2019-09-03 23:45 EDT
 
@@ -111,10 +112,12 @@ PORT STATE SERVICE
 445/tcp open microsoft-ds
 
 MAC Address: 00:0C:29:09:78:87 (VMware)
+```
 
 Nmap version and default script scan:
 
-root\@kali:\~\# nmap -sV -sC -A -p 22,80,139,445 192.168.211.129
+```bash
+root@kali:~# nmap -sV -sC -A -p 22,80,139,445 192.168.211.129
 
 Starting Nmap 7.80 ( https://nmap.org ) at 2019-09-03 23:46 EDT
 
@@ -126,19 +129,19 @@ PORT STATE SERVICE VERSION
 
 22/tcp open ssh OpenSSH 4.7p1 Debian 8ubuntu1.2 (protocol 2.0)
 
-\| ssh-hostkey:
+| ssh-hostkey:
 
-\| 1024 9b:ad:4f:f2:1e:c5:f2:39:14:b9:d3:a0:0b:e8:41:71 (DSA)
+| 1024 9b:ad:4f:f2:1e:c5:f2:39:14:b9:d3:a0:0b:e8:41:71 (DSA)
 
-\|\_ 2048 85:40:c6:d5:41:26:05:34:ad:f8:6e:f2:a7:6b:4f:0e (RSA)
+|_ 2048 85:40:c6:d5:41:26:05:34:ad:f8:6e:f2:a7:6b:4f:0e (RSA)
 
 80/tcp open http Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with
 Suhosin-Patch)
 
-\|_http-server-header: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with
+|_http-server-header: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with
 Suhosin-Patch
 
-\|_http-title: Site doesn't have a title (text/html).
+|_http-title: Site doesn't have a title (text/html).
 
 139/tcp open netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
 
@@ -163,54 +166,55 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Host script results:
 
-\|_clock-skew: mean: -2h00m00s, deviation: 2h49m42s, median: -4h00m00s
+|_clock-skew: mean: -2h00m00s, deviation: 2h49m42s, median: -4h00m00s
 
-\|_nbstat: NetBIOS name: KIOPTRIX4, NetBIOS user: \<unknown\>, NetBIOS MAC:
-\<unknown\> (unknown)
+|_nbstat: NetBIOS name: KIOPTRIX4, NetBIOS user: \<unknown\>, NetBIOS MAC:<unknown> (unknown)
 
-\| smb-os-discovery:
+| smb-os-discovery:
 
-\| OS: Unix (Samba 3.0.28a)
+| OS: Unix (Samba 3.0.28a)
 
-\| Computer name: Kioptrix4
+| Computer name: Kioptrix4
 
-\| NetBIOS computer name:
+| NetBIOS computer name:
 
-\| Domain name: localdomain
+| Domain name: localdomain
 
-\| FQDN: Kioptrix4.localdomain
+| FQDN: Kioptrix4.localdomain
 
-\|\_ System time: 2019-09-03T19:47:05-04:00
+|_ System time: 2019-09-03T19:47:05-04:00
 
-\| smb-security-mode:
+| smb-security-mode:
 
-\| account_used: guest
+| account_used: guest
 
-\| authentication_level: user
+| authentication_level: user
 
-\| challenge_response: supported
+| challenge_response: supported
 
-\|\_ message_signing: disabled (dangerous, but default)
+|\_ message_signing: disabled (dangerous, but default)
 
-\|_smb2-time: Protocol negotiation failed (SMB2)
+|_smb2-time: Protocol negotiation failed (SMB2)
 
 TRACEROUTE
 
 HOP RTT ADDRESS
 
 1 0.71 ms 192.168.211.129
+```
 
 ### Enum4linux
 
-root\@kali:\~\# enum4linux 192.168.211.129 \| grep -v unknown
+Enumerating Samba components with enum4linux:
 
-Starting enum4linux v0.8.9 (
-http://labs.portcullis.co.uk/application/enum4linux/ ) on Tue Sep 3 23:49:08
-2019
+```bash
+root@kali:~# enum4linux 192.168.211.129 \| grep -v unknown
+
+Starting enum4linux v0.8.9 (http://labs.portcullis.co.uk/application/enum4linux/ ) on Tue Sep 3 23:49:08 2019
 
 ==========================
 
-\| Target Information \|
+| Target Information |
 
 ==========================
 
@@ -226,7 +230,7 @@ Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
 
 =======================================================
 
-\| Enumerating Workgroup/Domain on 192.168.211.129 \|
+| Enumerating Workgroup/Domain on 192.168.211.129 |
 
 =======================================================
 
@@ -234,31 +238,31 @@ Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
 
 ===============================================
 
-\| Nbtstat Information for 192.168.211.129 \|
+| Nbtstat Information for 192.168.211.129 |
 
 ===============================================
 
 Looking up status of 192.168.211.129
 
-KIOPTRIX4 \<00\> - B \<ACTIVE\> Workstation Service
+KIOPTRIX4 <00> - B <ACTIVE> Workstation Service
 
-KIOPTRIX4 \<03\> - B \<ACTIVE\> Messenger Service
+KIOPTRIX4 <03> - B <ACTIVE> Messenger Service
 
 KIOPTRIX4 \<20\> - B \<ACTIVE\> File Server Service
 
-..__MSBROWSE__. \<01\> - \<GROUP\> B \<ACTIVE\> Master Browser
+..__MSBROWSE__. <01> - <GROUP> B <ACTIVE> Master Browser
 
-WORKGROUP \<1d\> - B \<ACTIVE\> Master Browser
+WORKGROUP <1d\> - B <ACTIVE> Master Browser
 
-WORKGROUP \<1e\> - \<GROUP\> B \<ACTIVE\> Browser Service Elections
+WORKGROUP <1e\> - <GROUP> B <ACTIVE> Browser Service Elections
 
-WORKGROUP \<00\> - \<GROUP\> B \<ACTIVE\> Domain/Workgroup Name
+WORKGROUP <00> - <GROUP> B <ACTIVE> Domain/Workgroup Name
 
 MAC Address = 00-00-00-00-00-00
 
 ========================================
 
-\| Session Check on 192.168.211.129 \|
+| Session Check on 192.168.211.129 |
 
 ========================================
 
@@ -266,7 +270,7 @@ MAC Address = 00-00-00-00-00-00
 
 ==============================================
 
-\| Getting domain SID for 192.168.211.129 \|
+| Getting domain SID for 192.168.211.129 |
 
 ==============================================
 
@@ -278,7 +282,7 @@ Domain Sid: (NULL SID)
 
 =========================================
 
-\| OS information on 192.168.211.129 \|
+| OS information on 192.168.211.129 |
 
 =========================================
 
@@ -299,7 +303,7 @@ server type : 0x809a03
 
 ================================
 
-\| Users on 192.168.211.129 \|
+| Users on 192.168.211.129 |
 
 ================================
 
@@ -326,13 +330,13 @@ user:[loneferret] rid:[0xbb8]
 
 ============================================
 
-\| Share Enumeration on 192.168.211.129 \|
+| Share Enumeration on 192.168.211.129 |
 
 ============================================
 
 Sharename Type Comment
 
-\--------- ---- -------
+--------- ---- -------
 
 print\$ Disk Printer Drivers
 
@@ -342,25 +346,25 @@ Reconnecting with SMB1 for workgroup listing.
 
 Server Comment
 
-\--------- -------
+--------- -------
 
 Workgroup Master
 
-\--------- -------
+--------- -------
 
 WORKGROUP KIOPTRIX4
 
 [+] Attempting to map shares on 192.168.211.129
 
-//192.168.211.129/print\$ Mapping: DENIED, Listing: N/A
+//192.168.211.129/print$ Mapping: DENIED, Listing: N/A
 
-//192.168.211.129/IPC\$ [E] Can't understand response:
+//192.168.211.129/IPC$ [E] Can't understand response:
 
 NT_STATUS_NETWORK_ACCESS_DENIED listing \\\*
 
 =======================================================
 
-\| Password Policy Information for 192.168.211.129 \|
+| Password Policy Information for 192.168.211.129 |
 
 =======================================================
 
@@ -414,7 +418,7 @@ Minimum Password Length: 0
 
 =================================
 
-\| Groups on 192.168.211.129 \|
+| Groups on 192.168.211.129 |
 
 =================================
 
@@ -432,7 +436,7 @@ Minimum Password Length: 0
 
 ==========================================================================
 
-\| Users on 192.168.211.129 via RID cycling (RIDS: 500-550,1000-1050) \|
+| Users on 192.168.211.129 via RID cycling (RIDS: 500-550,1000-1050) |
 
 ==========================================================================
 
@@ -477,100 +481,51 @@ S-1-5-21-2529228035-991147148-3991031631-1000 KIOPTRIX4\\root (Local User)
 
 ================================================
 
-\| Getting printer info for 192.168.211.129 \|
+| Getting printer info for 192.168.211.129 |
 
 ================================================
 
 No printers returned.
 
 enum4linux complete on Tue Sep 3 23:49:35 2019
-
+```
 ### Web Port Enumeration
 
 #### Nikto
-
-root\@kali:\~\# nikto -h 192.168.211.129
-
-\- Nikto v2.1.6
-
-\---------------------------------------------------------------------------
-
-\+ Target IP: 192.168.211.129
-
-\+ Target Hostname: 192.168.211.129
-
-\+ Target Port: 80
-
-\+ Start Time: 2019-09-03 23:51:08 (GMT-4)
-
-\---------------------------------------------------------------------------
-
-\+ Server: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch
-
-\+ Retrieved x-powered-by header: PHP/5.2.4-2ubuntu5.6
-
-\+ The anti-clickjacking X-Frame-Options header is not present.
-
-\+ The X-XSS-Protection header is not defined. This header can hint to the user
-agent to protect against some forms of XSS
-
-\+ The X-Content-Type-Options header is not set. This could allow the user agent
-to render the content of the site in a different fashion to the MIME type
-
-\+ Uncommon header 'tcn' found, with contents: list
-
-\+ Apache mod_negotiation is enabled with MultiViews, which allows attackers to
-easily brute force file names. See
-http://www.wisec.it/sectou.php?id=4698ebdc59d15. The following alternatives for
-'index' were found: index.php
-
-\+ Apache/2.2.8 appears to be outdated (current is at least Apache/2.4.37).
-Apache 2.2.34 is the EOL for the 2.x branch.
-
-\+ PHP/5.2.4-2ubuntu5.6 appears to be outdated (current is at least 7.2.12). PHP
-5.6.33, 7.0.27, 7.1.13, 7.2.1 may also current release for each branch.
-
-\+ Web Server returns a valid response with junk HTTP methods, this may cause
-false positives.
-
-\+ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to
-XST
-
-\+ OSVDB-12184: /?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000: PHP reveals
-potentially sensitive information via certain HTTP requests that contain
-specific QUERY strings.
-
-\+ OSVDB-12184: /?=PHPE9568F36-D428-11d2-A769-00AA001ACF42: PHP reveals
-potentially sensitive information via certain HTTP requests that contain
-specific QUERY strings.
-
-\+ OSVDB-12184: /?=PHPE9568F34-D428-11d2-A769-00AA001ACF42: PHP reveals
-potentially sensitive information via certain HTTP requests that contain
-specific QUERY strings.
-
-\+ OSVDB-12184: /?=PHPE9568F35-D428-11d2-A769-00AA001ACF42: PHP reveals
-potentially sensitive information via certain HTTP requests that contain
-specific QUERY strings.
-
-\+ OSVDB-3268: /icons/: Directory indexing found.
-
-\+ OSVDB-3268: /images/: Directory indexing found.
-
-\+ Server may leak inodes via ETags, header found with file /icons/README,
-inode: 98933, size: 5108, mtime: Tue Aug 28 06:48:10 2007
-
-\+ OSVDB-3233: /icons/README: Apache default file found.
-
-\+ Cookie PHPSESSID created without the httponly flag
-
-\+ 8724 requests: 0 error(s) and 19 item(s) reported on remote host
-
-\+ End Time: 2019-09-03 23:51:45 (GMT-4) (37 seconds)
-
-\---------------------------------------------------------------------------
-
-\+ 1 host(s) tested
-
+```bash
+root@kali:~# nikto -h 192.168.211.129
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.211.129
++ Target Hostname:    192.168.211.129
++ Target Port:        80
++ Start Time:         2019-09-03 23:51:08 (GMT-4)
+---------------------------------------------------------------------------
++ Server: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch
++ Retrieved x-powered-by header: PHP/5.2.4-2ubuntu5.6
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Uncommon header 'tcn' found, with contents: list
++ Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. See http://www.wisec.it/sectou.php?id=4698ebdc59d15. The following alternatives for 'index' were found: index.php
++ Apache/2.2.8 appears to be outdated (current is at least Apache/2.4.37). Apache 2.2.34 is the EOL for the 2.x branch.
++ PHP/5.2.4-2ubuntu5.6 appears to be outdated (current is at least 7.2.12). PHP 5.6.33, 7.0.27, 7.1.13, 7.2.1 may also current release for each branch.
++ Web Server returns a valid response with junk HTTP methods, this may cause false positives.
++ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST
++ OSVDB-12184: /?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPE9568F36-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPE9568F34-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPE9568F35-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-3268: /icons/: Directory indexing found.
++ OSVDB-3268: /images/: Directory indexing found.
++ Server may leak inodes via ETags, header found with file /icons/README, inode: 98933, size: 5108, mtime: Tue Aug 28 06:48:10 2007
++ OSVDB-3233: /icons/README: Apache default file found.
++ Cookie PHPSESSID created without the httponly flag
++ 8724 requests: 0 error(s) and 19 item(s) reported on remote host
++ End Time:           2019-09-03 23:51:45 (GMT-4) (37 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+```
 #### GoBuster
 
 root\@kali:\~\# gobuster dir -u 192.168.211.129 -w
