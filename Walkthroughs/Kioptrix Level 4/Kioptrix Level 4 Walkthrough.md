@@ -353,15 +353,20 @@ root@kali:~# nikto -h 192.168.211.129
 + The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
 + The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
 + Uncommon header 'tcn' found, with contents: list
-+ Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. See http://www.wisec.it/sectou.php?id=4698ebdc59d15. The following alternatives for 'index' were found: index.php
++ Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. See http://www.wisec.it/sectou.php?id=4698ebdc59d15. 
+The following alternatives for 'index' were found: index.php
 + Apache/2.2.8 appears to be outdated (current is at least Apache/2.4.37). Apache 2.2.34 is the EOL for the 2.x branch.
 + PHP/5.2.4-2ubuntu5.6 appears to be outdated (current is at least 7.2.12). PHP 5.6.33, 7.0.27, 7.1.13, 7.2.1 may also current release for each branch.
 + Web Server returns a valid response with junk HTTP methods, this may cause false positives.
 + OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST
-+ OSVDB-12184: /?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
-+ OSVDB-12184: /?=PHPE9568F36-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
-+ OSVDB-12184: /?=PHPE9568F34-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
-+ OSVDB-12184: /?=PHPE9568F35-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000: 
+PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPE9568F36-D428-11d2-A769-00AA001ACF42: 
+PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPE9568F34-D428-11d2-A769-00AA001ACF42: 
+PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPE9568F35-D428-11d2-A769-00AA001ACF42: 
+PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
 + OSVDB-3268: /icons/: Directory indexing found.
 + OSVDB-3268: /images/: Directory indexing found.
 + Server may leak inodes via ETags, header found with file /icons/README, inode: 98933, size: 5108, mtime: Tue Aug 28 06:48:10 2007
@@ -468,7 +473,8 @@ root      4659  0.0  0.0   1716   492 tty6     Ss+  19:41   0:00 /sbin/getty 384
 root      4711  0.0  0.0   1872   544 ?        S    19:41   0:00 /bin/dd bs 1 if /proc/kmsg of /var/run/klogd/kmsg
 root      4732  0.0  0.0   5316   992 ?        Ss   19:41   0:00 /usr/sbin/sshd
 root      4788  0.0  0.0   1772   524 ?        S    19:41   0:00 /bin/sh /usr/bin/mysqld_safe
-root      4830  0.0  1.7 127224 17608 ?        Sl   19:41   0:04 /usr/sbin/mysqld --basedir=/usr --datadir=/var/lib/mysql --user=root --pid-file=/var/ru
+root      4830  0.0  1.7 127224 17608 ?        Sl   19:41   0:04 /usr/sbin/mysqld --basedir=/usr 
+--datadir=/var/lib/mysql --user=root --pid-file=/var/ru
 root      4832  0.0  0.0   1700   552 ?        S    19:41   0:00 logger -p daemon.err -t mysqld_safe -i -t mysqld
 root      4905  0.0  0.1   6528  1332 ?        Ss   19:41   0:00 /usr/sbin/nmbd -D
 root      4907  0.0  0.2  10108  2544 ?        Ss   19:41   0:00 /usr/sbin/smbd -D
