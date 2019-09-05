@@ -515,14 +515,14 @@ $db_name="members"; // Database name
 $tbl_name="members"; // Table name
 ```
 
-MySql credentials were found in checklogin.php file located in /var/www directory.
+MySQL credentials were found in checklogin.php file located in /var/www directory.
 
 Vulnerability Identification
 ----------------------------
 
 ### Searchsploit
 
-Using searchsploit to looking for appropriate exploit in exploit-db. It seems like User-Defined Functions is an appropriate vulnerability. 
+Using searchsploit to looking for appropriate exploit in exploit-db. It seems like User-Defined Functions is an appropriate vulnerability. User-Defined Functions has one particular function called sys_exec, which lets a user execute system commands from within MySQL.
 ```bash
 root@kali:/opt/LinEnum# searchsploit MySQL Privilege Escalation
 --------------------------------------------------------------------------------------------- ----------------------------------------
