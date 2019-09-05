@@ -68,7 +68,7 @@ Reconnaissance
 
 Discovering the vulnerable system with netdiscover
 ```bash
-netdiscover -r 192.168.211.0/24
+root@kali:~# netdiscover -r 192.168.211.0/24
 
 Currently scanning: Finished! \| Screen View: Unique Hosts
 
