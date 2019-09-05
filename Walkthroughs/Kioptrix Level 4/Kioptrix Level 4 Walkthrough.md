@@ -70,21 +70,16 @@ Discovering the vulnerable system with netdiscover
 ```bash
 root@kali:~# netdiscover -r 192.168.211.0/24
 
-Currently scanning: Finished! \| Screen View: Unique Hosts
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                 
+                                                                               
+ 3 Captured ARP Req/Rep packets, from 3 hosts.   Total size: 180               
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.211.1   00:50:56:c0:00:01      1      60  VMware, Inc.                
+ 192.168.211.129 00:0c:29:09:78:87      1      60  VMware, Inc.                
+ 192.168.211.254 00:50:56:e9:22:18      1      60  VMware, Inc.
 
-3 Captured ARP Req/Rep packets, from 3 hosts. Total size: 180
-
-_____________________________________________________________________________
-
-IP At MAC Address Count Len MAC Vendor / Hostname
-
------------------------------------------------------------------------------
-
-192.168.211.1 00:50:56:c0:00:01 1 60 VMware, Inc.
-
-192.168.211.129 00:0c:29:09:78:87 1 60 VMware, Inc.
-
-192.168.211.254 00:50:56:e9:22:18 1 60 VMware, Inc.
 ```
 ### Nmap
 
@@ -92,115 +87,66 @@ Nmap all ports scan:
 
 ```bash
 root@kali:~# nmap -p- 192.168.211.129
-
 Starting Nmap 7.80 ( https://nmap.org ) at 2019-09-03 23:45 EDT
-
 Nmap scan report for 192.168.211.129
-
 Host is up (0.00067s latency).
-
 Not shown: 39528 closed ports, 26003 filtered ports
-
-PORT STATE SERVICE
-
-22/tcp open ssh
-
-80/tcp open http
-
-139/tcp open netbios-ssn
-
-445/tcp open microsoft-ds
-
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
 MAC Address: 00:0C:29:09:78:87 (VMware)
+
 ```
 
 Nmap version and default script scan:
 
 ```bash
 root@kali:~# nmap -sV -sC -A -p 22,80,139,445 192.168.211.129
-
 Starting Nmap 7.80 ( https://nmap.org ) at 2019-09-03 23:46 EDT
-
 Nmap scan report for 192.168.211.129
-
 Host is up (0.00071s latency).
 
-PORT STATE SERVICE VERSION
-
-22/tcp open ssh OpenSSH 4.7p1 Debian 8ubuntu1.2 (protocol 2.0)
-
-| ssh-hostkey:
-
-| 1024 9b:ad:4f:f2:1e:c5:f2:39:14:b9:d3:a0:0b:e8:41:71 (DSA)
-
-|_ 2048 85:40:c6:d5:41:26:05:34:ad:f8:6e:f2:a7:6b:4f:0e (RSA)
-
-80/tcp open http Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with
-Suhosin-Patch)
-
-|_http-server-header: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with
-Suhosin-Patch
-
+PORT    STATE SERVICE     VERSION
+22/tcp  open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1.2 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 9b:ad:4f:f2:1e:c5:f2:39:14:b9:d3:a0:0b:e8:41:71 (DSA)
+|_  2048 85:40:c6:d5:41:26:05:34:ad:f8:6e:f2:a7:6b:4f:0e (RSA)
+80/tcp  open  http        Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch)
+|_http-server-header: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch
 |_http-title: Site doesn't have a title (text/html).
-
-139/tcp open netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
-
-445/tcp open netbios-ssn Samba smbd 3.0.28a (workgroup: WORKGROUP)
-
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp open  netbios-ssn Samba smbd 3.0.28a (workgroup: WORKGROUP)
 MAC Address: 00:0C:29:09:78:87 (VMware)
-
-Warning: OSScan results may be unreliable because we could not find at least 1
-open and 1 closed port
-
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
 Device type: general purpose
-
 Running: Linux 2.6.X
-
 OS CPE: cpe:/o:linux:linux_kernel:2.6
-
 OS details: Linux 2.6.9 - 2.6.33
-
 Network Distance: 1 hop
-
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Host script results:
-
 |_clock-skew: mean: -2h00m00s, deviation: 2h49m42s, median: -4h00m00s
-
-|_nbstat: NetBIOS name: KIOPTRIX4, NetBIOS user: \<unknown\>, NetBIOS MAC:<unknown> (unknown)
-
-| smb-os-discovery:
-
-| OS: Unix (Samba 3.0.28a)
-
-| Computer name: Kioptrix4
-
-| NetBIOS computer name:
-
-| Domain name: localdomain
-
-| FQDN: Kioptrix4.localdomain
-
-|_ System time: 2019-09-03T19:47:05-04:00
-
-| smb-security-mode:
-
-| account_used: guest
-
-| authentication_level: user
-
-| challenge_response: supported
-
-|\_ message_signing: disabled (dangerous, but default)
-
+|_nbstat: NetBIOS name: KIOPTRIX4, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.28a)
+|   Computer name: Kioptrix4
+|   NetBIOS computer name: 
+|   Domain name: localdomain
+|   FQDN: Kioptrix4.localdomain
+|_  System time: 2019-09-03T19:47:05-04:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
 |_smb2-time: Protocol negotiation failed (SMB2)
 
 TRACEROUTE
-
-HOP RTT ADDRESS
-
-1 0.71 ms 192.168.211.129
+HOP RTT     ADDRESS
+1   0.71 ms 192.168.211.129
 ```
 
 ### Enum4linux
