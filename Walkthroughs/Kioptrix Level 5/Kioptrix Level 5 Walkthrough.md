@@ -285,11 +285,11 @@ WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
 
 -----------------
 
-GENERATED WORDS: 4612                                                          
+GENERATED WORDS: 4612
 
 ---- Scanning URL: http://192.168.20.148:8080/ ----
 + http://192.168.20.148:8080/cgi-bin/ (CODE:403|SIZE:210)                                                                                        
-                                                                                                                                                 
+
 -----------------
 END_TIME: Thu Sep  5 13:49:59 2019
 DOWNLOADED: 4612 - FOUND: 1
