@@ -161,14 +161,17 @@ root@kali:~/vulnhub/kioptrix_5# nikto -h 192.168.20.148
 + Server may leak inodes via ETags, header found with file /, inode: 67014, size: 152, mtime: Sat Mar 29 13:22:52 2014
 + The anti-clickjacking X-Frame-Options header is not present.
 + The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
-+ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ The X-Content-Type-Options header is not set. 
+This could allow the user agent to render the content of the site in a different fashion to the MIME type
 + Apache/2.2.21 appears to be outdated (current is at least Apache/2.4.37). Apache 2.2.34 is the EOL for the 2.x branch.
 + OpenSSL/0.9.8q appears to be outdated (current is at least 1.1.1). OpenSSL 1.0.0o and 0.9.8zc are also current.
-+ PHP/5.3.8 appears to be outdated (current is at least 7.2.12). PHP 5.6.33, 7.0.27, 7.1.13, 7.2.1 may also current release for each branch.
++ PHP/5.3.8 appears to be outdated (current is at least 7.2.12). 
+PHP 5.6.33, 7.0.27, 7.1.13, 7.2.1 may also current release for each branch.
 + mod_ssl/2.2.21 appears to be outdated (current is at least 2.8.31) (may depend on server version)
 + Allowed HTTP Methods: GET, HEAD, POST, OPTIONS, TRACE 
 + OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST
-+ mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8 - mod_ssl 2.8.7 and lower are vulnerable to a remote buffer overflow which may allow a remote shell. http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0082, OSVDB-756.
++ mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8 - mod_ssl 2.8.7 and lower are vulnerable to a remote buffer overflow which may allow a remote shell. 
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0082, OSVDB-756.
 + 8724 requests: 0 error(s) and 11 item(s) reported on remote host
 + End Time:           2019-09-05 13:42:18 (GMT-4) (86 seconds)
 ---------------------------------------------------------------------------
@@ -248,14 +251,17 @@ root@kali:~/vulnhub/kioptrix_5# nikto -h 192.168.20.148:8080
 + Server: Apache/2.2.21 (FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8
 + The anti-clickjacking X-Frame-Options header is not present.
 + The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
-+ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ The X-Content-Type-Options header is not set. 
+This could allow the user agent to render the content of the site in a different fashion to the MIME type
 + All CGI directories 'found', use '-C none' to test none
 + mod_ssl/2.2.21 appears to be outdated (current is at least 2.8.31) (may depend on server version)
 + OpenSSL/0.9.8q appears to be outdated (current is at least 1.1.1). OpenSSL 1.0.0o and 0.9.8zc are also current.
 + Apache/2.2.21 appears to be outdated (current is at least Apache/2.4.37). Apache 2.2.34 is the EOL for the 2.x branch.
-+ PHP/5.3.8 appears to be outdated (current is at least 7.2.12). PHP 5.6.33, 7.0.27, 7.1.13, 7.2.1 may also current release for each branch.
++ PHP/5.3.8 appears to be outdated (current is at least 7.2.12). 
+PHP 5.6.33, 7.0.27, 7.1.13, 7.2.1 may also current release for each branch.
 + OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST
-+ mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8 - mod_ssl 2.8.7 and lower are vulnerable to a remote buffer overflow which may allow a remote shell. http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0082, OSVDB-756.
++ mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8 - mod_ssl 2.8.7 and lower are vulnerable to a remote buffer overflow which may allow a remote shell. 
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0082, OSVDB-756.
 + 26549 requests: 0 error(s) and 9 item(s) reported on remote host
 + End Time:           2019-09-05 13:47:47 (GMT-4) (289 seconds)
 ---------------------------------------------------------------------------
