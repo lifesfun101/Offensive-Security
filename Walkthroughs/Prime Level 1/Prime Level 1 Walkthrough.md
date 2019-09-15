@@ -55,18 +55,18 @@ Maintain whitelist of files that may be accessed by the web page/application and
 Methodology
 -----------
 
-•	Host Discovery (netdiscover)
-•	Port Scanning (nmap)
-•	Web Ports Enumeration (nikto, gobuster, browser, wfuzz)
-•	Discovered Local File Inclusion Vulnerability (browser)
-•	Further Web Port Enumeration (browser, gobuster,wfuzz, curl)
-•	Discovered Remote Command Execution Vulnerability (browser - WordPress)
-•	Low Privilege Shell Gained (php reverse shell/nc)
-•	Privilege Escalation Enumeration (sudo -l)
-•	Discovered Back Up Password (bash ls)
-•	Decoded Password (echo, openssl, base64)
-•	Privilege Escalation Enumeration (sudo -l)
-•	Exploited binary with SUID bit by impersonating the file (cp /bin/bash /tmp/challenge)
+*	Host Discovery (netdiscover)
+*	Port Scanning (nmap)
+*	Web Ports Enumeration (nikto, gobuster, browser, wfuzz)
+*	Discovered Local File Inclusion Vulnerability (browser)
+*	Further Web Port Enumeration (browser, gobuster,wfuzz, curl)
+*	Discovered Remote Command Execution Vulnerability (browser - WordPress)
+*	Low Privilege Shell Gained (php reverse shell/nc)
+*	Privilege Escalation Enumeration (sudo -l)
+*	Discovered Back Up Password (bash ls)
+*	Decoded Password (echo, openssl, base64)
+*	Privilege Escalation Enumeration (sudo -l)
+*	Exploited binary with SUID bit by impersonating the file (cp /bin/bash /tmp/challenge)
 
 Host Discovery (Netdiscover)
 ----------------------------
