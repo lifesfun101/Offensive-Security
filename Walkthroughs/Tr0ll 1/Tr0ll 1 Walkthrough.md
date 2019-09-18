@@ -65,6 +65,10 @@ MAC Address: 00:0C:29:A1:DF:41 (VMware)
 
 Nmap done: 1 IP address (1 host up) scanned in 15.75 seconds
 ```
+
+Nmap aggresive version and default script scan:
+
+```
 root@lifesfun:~# nmap -sV -sC -A -p 21,22,80 192.168.20.150
 Starting Nmap 7.80 ( https://nmap.org ) at 2019-09-15 19:51 EDT
 Nmap scan report for 192.168.20.150
