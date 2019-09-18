@@ -58,25 +58,25 @@ Vulnhub: Provides OSCP like virtual machines for download and practice - https:/
 
    Some of the boxes I've done: 
       
-   *   *[Kioptrix 1](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/)    --- walkthrough can be found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix/Kioptrix%201%20Walkthrough.md)
+   *   [Kioptrix 1](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/)    --- walkthrough can be found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix/Kioptrix%201%20Walkthrough.md)
         
-   *   *[Kioptrix 1.1](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/) --- walkthrough can be found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%202/Kioptrix%20Level%202%20Walkthrough.md)
+   *   [Kioptrix 1.1](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/) --- walkthrough can be found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%202/Kioptrix%20Level%202%20Walkthrough.md)
        
-   *   *[Kiotprix 1.2](https://www.vulnhub.com/entry/kioptrix-level-12-3,24/)
+   *   [Kiotprix 1.2](https://www.vulnhub.com/entry/kioptrix-level-12-3,24/)
         
-   *   *[Kioptrix 1.3](https://www.vulnhub.com/entry/kioptrix-level-13-4,25/)
+   *   [Kioptrix 1.3](https://www.vulnhub.com/entry/kioptrix-level-13-4,25/)
         
-   *   *[Kioptrix 2014](https://www.vulnhub.com/entry/kioptrix-2014-5,62/)
+   *   [Kioptrix 2014](https://www.vulnhub.com/entry/kioptrix-2014-5,62/)
         
-   *   *[Stapler](https://www.vulnhub.com/entry/stapler-1,150/)  --- walkthrough can be found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Stapler_Walkthrough.md)
+   *   [Stapler](https://www.vulnhub.com/entry/stapler-1,150/)  --- walkthrough can be found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Stapler_Walkthrough.md)
         
-   *   *[Tr0ll 1](https://www.vulnhub.com/entry/tr0ll-1,100/)
+   *   [Tr0ll 1](https://www.vulnhub.com/entry/tr0ll-1,100/)
+     
+   *   [Prime: 1](https://www.vulnhub.com/entry/prime-1,358/)  
         
-   *   *[Tr0ll 2](https://www.vulnhub.com/entry/tr0ll-2,107/)
-        
-   *   *[SickOS 1.1](https://www.vulnhub.com/entry/sickos-11,132/)
+   *   [SickOS 1.1](https://www.vulnhub.com/entry/sickos-11,132/)
    
-   *   *[symfonos: 2](https://www.vulnhub.com/entry/symfonos-2,331/)   --- walkthrough can be found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Symfonos:%202/Symfonos:%202%20Walkthrough.md)
+   *   [symfonos: 2](https://www.vulnhub.com/entry/symfonos-2,331/)   --- walkthrough can be found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Symfonos:%202/Symfonos:%202%20Walkthrough.md)
                                    
 
 OWASP Vulnerable Web Applications: Numerous links vulnerabale web application to practice on both online and offline: [OWASP Vulnerable App](https://www.owasp.org/index.php/OWASP_Vulnerable_Web_Applications_Directory_Project)
