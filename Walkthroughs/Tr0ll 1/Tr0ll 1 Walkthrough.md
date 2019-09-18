@@ -11,21 +11,21 @@ summarizing vulnerabilities as I normally do.**
 Methodology
 -----------
 
-Host Discovery (Netdiscover)
+* Host Discovery (Netdiscover)
 
-Port Scanning (nmap)
+* Port Scanning (nmap)
 
-FTP enumeration (ftp)
+* FTP enumeration (ftp)
 
-pcap enumeration (wireshark)
+* pcap enumeration (wireshark)
 
-Web Enumeration (nikto, gobuster, browser)
+* Web Enumeration (nikto, gobuster, browser)
 
-SSH Bruteforcing (hydra)
+* SSH Bruteforcing (hydra)
 
-Low Privilege Shell (SSH)
+* Low Privilege Shell (SSH)
 
-Privilege Escalation (linuxprivchecker.py, files with weak permissions)
+* Privilege Escalation (linuxprivchecker.py, files with weak permissions)
 
 Reconnaissance
 --------------
