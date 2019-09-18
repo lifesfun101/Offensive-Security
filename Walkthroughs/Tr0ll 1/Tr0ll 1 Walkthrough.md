@@ -171,12 +171,15 @@ root@lifesfun:~# nikto -h 192.168.20.150
 ---------------------------------------------------------------------------
 + Server: Apache/2.4.7 (Ubuntu)
 + The anti-clickjacking X-Frame-Options header is not present.
-+ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
-+ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ The X-XSS-Protection header is not defined. 
+This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. 
+This could allow the user agent to render the content of the site in a different fashion to the MIME type
 + No CGI Directories found (use '-C all' to force check all possible dirs)
 + Entry '/secret/' in robots.txt returned a non-forbidden or redirect HTTP code (200)
 + "robots.txt" contains 1 entry which should be manually viewed.
-+ Apache/2.4.7 appears to be outdated (current is at least Apache/2.4.37). Apache 2.2.34 is the EOL for the 2.x branch.
++ Apache/2.4.7 appears to be outdated (current is at least Apache/2.4.37). 
+Apache 2.2.34 is the EOL for the 2.x branch.
 + Allowed HTTP Methods: GET, HEAD, POST, OPTIONS 
 + OSVDB-3092: /secret/: This might be interesting...
 + OSVDB-3233: /icons/README: Apache default file found.
