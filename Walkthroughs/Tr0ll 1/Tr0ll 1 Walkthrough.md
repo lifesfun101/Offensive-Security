@@ -223,7 +223,7 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 
 Enumerating website with the browser.
 
-![](media/d9e4770e426d5ba1e6be3ccde7e96b02.png)
+![](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Tr0ll%201/Images/d9e4770e426d5ba1e6be3ccde7e96b02.png?raw=true)
 
 /secret directory
 
