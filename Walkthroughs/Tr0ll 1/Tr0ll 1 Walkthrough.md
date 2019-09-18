@@ -238,7 +238,8 @@ Once the file is downloaded, it’s time for enumeration.
 
 ```
 root@lifesfun:~/vulnhub/tr0ll# file roflmao 
-roflmao: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.24, BuildID[sha1]=5e14420eaa59e599c2f508490483d959f3d2cf4f, not stripped
+roflmao: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, 
+for GNU/Linux 2.6.24, BuildID[sha1]=5e14420eaa59e599c2f508490483d959f3d2cf4f, not stripped
 root@lifesfun:~/vulnhub/tr0ll# strings roflmao 
 /lib/ld-linux.so.2
 libc.so.6
