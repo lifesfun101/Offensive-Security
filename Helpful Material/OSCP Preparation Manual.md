@@ -31,17 +31,17 @@ Book: "Penetration Testing: A Hands-On Introduction to Hacking" (my review of it
 
 Cybrary: Penetration Testing and Ethical Hacking - https://www.cybrary.it/course/ethical-hacking/
           
-          * Introductory course to the basics of ethical hacking/penetration testing
+   * Introductory course to the basics of ethical hacking/penetration testing
 
 Cybrary: Advanced Penetration Testing - https://www.cybrary.it/course/advanced-penetration-testing/
           
-          * I discovered this course much later than reading the book mentioned above. 
+   * I discovered this course much later than reading the book mentioned above. 
             The course basically follows the exercises in the Penetration Testing book 
             and is narrated by the book's author, Georgia Weidman. It's always nice to have 2 ways of learning.
 
 Cybrary: Web Application Penetration Testing - https://www.cybrary.it/course/web-application-pen-testing/
           
-          * Introductory course to web application vulnerabilities such as SQL Injections, Cross Site Scripts and 
+   * Introductory course to web application vulnerabilities such as SQL Injections, Cross Site Scripts and 
             Local File Inclusion/Remote File Inclusion. It also goes over Report Creation.
 
 After going through the resources above one should have a basic understanding of penetration testing , some tools and techniques (at least I did).
