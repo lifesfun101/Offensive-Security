@@ -52,37 +52,40 @@ Over the Wire War Games: Presents you with various CTF like challenges in Linux 
 
 Hack this Site: Free website with various pentesting challenges - https://www.hackthissite.org/
 
+PentesterLab: Web application hacking with some free VMs/Exercises - https://pentesterlab.com
+
 Hack the Box: Pentesting/CTF Labs - https://www.hackthebox.eu/
 
 Vulnhub: Provides OSCP like virtual machines for download and practice - https://www.vulnhub.com/
 
    Some of the boxes I've done: 
       
-   *   [Kioptrix 1](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/)    --- walkthrough can be found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix/Kioptrix%201%20Walkthrough.md)
+   *   [Kioptrix 1](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/)    --- walkthrough can be found [here](https://lifesfun101.github.io/2019/08/29/kioptrix-1-walkthrough.html)
         
-   *   [Kioptrix 1.1](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/) --- walkthrough can be found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Kioptrix%20Level%202/Kioptrix%20Level%202%20Walkthrough.md)
+   *   [Kioptrix 1.1](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/) --- walkthrough can be found [here](https://lifesfun101.github.io/2019/08/30/kioptrix-1.1-walkthrough.html)
        
-   *   [Kiotprix 1.2](https://www.vulnhub.com/entry/kioptrix-level-12-3,24/)
+   *   [Kiotprix 1.2](https://www.vulnhub.com/entry/kioptrix-level-12-3,24/) --- walkthrough can be found [here](https://lifesfun101.github.io/2019/09/02/kioptrix-1.2-walkthrough.html)
         
-   *   [Kioptrix 1.3](https://www.vulnhub.com/entry/kioptrix-level-13-4,25/)
+   *   [Kioptrix 1.3](https://www.vulnhub.com/entry/kioptrix-level-13-4,25/) --- walkthrough can be found [here](https://lifesfun101.github.io/2019/09/05/kioptrix-1.3-walkthrough.html)
         
-   *   [Kioptrix 2014](https://www.vulnhub.com/entry/kioptrix-2014-5,62/)
+   *   [Kioptrix 2014](https://www.vulnhub.com/entry/kioptrix-2014-5,62/) --- walkthrough can be found [here](https://lifesfun101.github.io/2019/09/06/kioptrix-5-walkthrough.html)
         
    *   [Stapler](https://www.vulnhub.com/entry/stapler-1,150/)  --- walkthrough can be found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Stapler/Stapler_Walkthrough.md)
         
-   *   [Tr0ll 1](https://www.vulnhub.com/entry/tr0ll-1,100/)
+   *   [Tr0ll 1](https://www.vulnhub.com/entry/tr0ll-1,100/) --- walkthrough can be found [here](https://lifesfun101.github.io/2019/09/17/Tr0ll_1-walkthrough.html)
      
-   *   [Prime: 1](https://www.vulnhub.com/entry/prime-1,358/)  
-        
-   *   [SickOS 1.1](https://www.vulnhub.com/entry/sickos-11,132/)
+   *   [Prime: 1](https://www.vulnhub.com/entry/prime-1,358/) --- walkthrough can be found [here](https://lifesfun101.github.io/2019/09/15/Prime_1-walkthrough.html)
    
-   *   [symfonos: 2](https://www.vulnhub.com/entry/symfonos-2,331/)   --- walkthrough can be found [here](https://github.com/lifesfun101/Offensive-Security/blob/master/Walkthroughs/Symfonos:%202/Symfonos:%202%20Walkthrough.md)
+   *   [symfonos: 2](https://www.vulnhub.com/entry/symfonos-2,331/)   --- walkthrough can be found [here](https://lifesfun101.github.io/2019/09/09/Symphonos2-walkthrough.html)
                                    
 
 OWASP Vulnerable Web Applications: Numerous links vulnerabale web application to practice on both online and offline: [OWASP Vulnerable App](https://www.owasp.org/index.php/OWASP_Vulnerable_Web_Applications_Directory_Project)
       
       * Some of my favorites for Web App Pentesting: Security Shepherd, Damn Vulnerable Web Application
  
- 
- 
+Buffer OverFlow: [VeteranSecurity's 32-Bit Windows Buffer Overflows Made Easy](https://veteransec.com/2018/09/10/32-bit-windows-buffer-overflows-made-easy/)
 
+      * Buffer Overflows were a little confusing to me, but this tutorial made it really easy. Also if you follow the Advanced Penetration Testing course on Cybrary or/and read Penetration Testing: A Hands-On Introduction to Hacking, Georgia Weidman also has good step by step example of this.
+ 
+ 
+Various helpful resources I bookmarked while studying for OSCP: [bookmarks](https://github.com/lifesfun101/Offensive-Security/raw/master/Helpful%20Material/OSCP_bookmarks.html) 
