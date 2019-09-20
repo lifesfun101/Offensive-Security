@@ -1,3 +1,5 @@
+A little guide with essentials for OSCP preparation. These are some of the resources I used and noted while preparing for OSCP. I hope this helps some of you on your journey
+
 # Essentials
 
 All the course prerequisites can easily be found on offensive-security's webpage.
