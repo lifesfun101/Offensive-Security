@@ -79,7 +79,7 @@ Vulnhub: Provides OSCP like virtual machines for download and practice - https:/
    *   [symfonos: 2](https://www.vulnhub.com/entry/symfonos-2,331/)   --- walkthrough can be found [here](https://lifesfun101.github.io/2019/09/09/Symphonos2-walkthrough.html)
                                    
 
-OWASP Vulnerable Web Applications: Numerous links vulnerabale web application to practice on both online and offline: [OWASP Vulnerable App](https://www.owasp.org/index.php/OWASP_Vulnerable_Web_Applications_Directory_Project)
+OWASP Vulnerable Web Applications: Numerous links for vulnerabale web application to practice on, both online and offline: [OWASP Vulnerable App](https://www.owasp.org/index.php/OWASP_Vulnerable_Web_Applications_Directory_Project)
       
    * Some of my favorites for Web App Pentesting: Security Shepherd, Damn Vulnerable Web Application
  
