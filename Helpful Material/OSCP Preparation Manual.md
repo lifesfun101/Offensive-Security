@@ -85,7 +85,9 @@ OWASP Vulnerable Web Applications: Numerous links vulnerabale web application to
  
 Buffer OverFlow: [VeteranSecurity's 32-Bit Windows Buffer Overflows Made Easy](https://veteransec.com/2018/09/10/32-bit-windows-buffer-overflows-made-easy/)
 
-      * Buffer Overflows were a little confusing to me, but this tutorial made it really easy. Also if you follow the Advanced Penetration Testing course on Cybrary or/and read Penetration Testing: A Hands-On Introduction to Hacking, Georgia Weidman also has good step by step example of this.
+      * Buffer Overflows were a little confusing to me, but this tutorial made it really easy. 
+      Also if you follow the Advanced Penetration Testing course on Cybrary 
+      or/and read Penetration Testing: A Hands-On Introduction to Hacking, Georgia Weidman also has good step by step example of this.
  
  
 Various helpful resources I bookmarked while studying for OSCP: [bookmarks](https://github.com/lifesfun101/Offensive-Security/raw/master/Helpful%20Material/OSCP_bookmarks.html) 
